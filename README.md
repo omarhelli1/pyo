@@ -7,7 +7,7 @@
 POY
 
 ## Objectif du projet
-***
+
 Application destinée à un organisme de formation afin de présenter son catalogue de formations et pouvoir échanger avec les utilisateurs lorsque leur choix est établi sur les possibles présentés.
 
 ### Prérequis
