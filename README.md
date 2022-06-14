@@ -3,40 +3,49 @@
 
 # Projet fil-rouge 
 * nom du projet
+
+POY
+
+## Objectif du projet
 ***
-YOP
-
-* objectif du projet
-
 Application destinée à un organisme de formation afin de présenter son catalogue de formations et pouvoir échanger avec les utilisateurs lorsque leur choix est établi sur les possibles présentés.
 
-## Prérequis
-* Spring, Angular
+### Prérequis
+
+* Angular, Spring
 
 ## Téchnologies utilisées
-* ide
+***
+### Environnement de Développement Intégré
 
 IntelliJ, Visual Studio Code
 
-* Framework
+### Frameworks
 
-Spring, Angular
+Angular, Spring
 
 ## Installation
-* NPM
+***
+### npm
 ```
 sudo apt-get install npm
-``` 
-* Angular
+```
+
+### angular
 ```
 npm install -g @ angular / cli
 ```
-* Spring
+
+### spring
 ```
 TODO
 ```
 
 ## Utilisation
+***
+TODO
 
 
-### Equipe : Omar Helli, Yasmine Leroy, Paul Decoux.
+##
+***
+Equipe : Omar Helli, Yasmine Leroy, Paul Decoux.
