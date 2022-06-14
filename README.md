@@ -26,7 +26,7 @@ Angular
 ```
 Version 
 ```
-## Utilisation
+# Utilisation
 
 
 ### Equipe : Omar Helli, Yasmine Leroy, Paul Decoux.
