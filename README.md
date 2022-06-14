@@ -25,7 +25,7 @@ IntelliJ, Visual Studio Code
 Angular, Spring
 ***
 ## Installation
-***
+
 ### npm
 ```
 sudo apt-get install npm
