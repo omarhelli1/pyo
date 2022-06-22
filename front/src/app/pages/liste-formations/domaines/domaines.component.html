@@ -1,0 +1,18 @@
+<div class="container-domaine">
+    <div class="title-domaine">
+        <p>{{data.nom}}</p>
+    </div>
+    <ul>
+        <!-- Ajouter un style a la liste (icons)-->
+        <li *ngFor="let theme of data.themes"  [routerLink]="['/liste-des-formations', theme.nom.replace(regexUri, '-'), theme.id]">{{theme.nom}}</li>
+    </ul>
+</div>
+
+
+
+
+<!-- <ul>
+        <li *ngFor="let item of domaines" "
+        routerLinkActive="router-link-active">{{item.name}}</li>
+
+</ul> -->
