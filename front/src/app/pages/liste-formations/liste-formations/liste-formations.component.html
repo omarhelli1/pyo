@@ -6,11 +6,11 @@
             <th>Actions</th>
         </tr>
     </thead>
-    <tbody>
-        <tr *ngFor="let formation of data.formations; let i = index">
+    <tbody *ngIf="theme">
+        <tr *ngFor="let formation of theme.formations; let i = index">
             <td class="td-nom-formation">{{formation.nom}}</td>
-            <td >{{txt}}<td>
-            <td>Details</td>
+            <td>{{txt}}</td>
+            <td>Actions</td>
         </tr>
     </tbody>
 </table>

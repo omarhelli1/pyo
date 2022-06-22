@@ -12,11 +12,7 @@ export class DomainesComponent implements OnInit {
   regexUri: RegExp = / /g
   constructor() { }
 
-  ngOnInit(): void {
-    
+  ngOnInit(): void {}
 
-    
-    
-  }
 
 }

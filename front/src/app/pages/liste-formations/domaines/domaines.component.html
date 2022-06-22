@@ -4,7 +4,7 @@
     </div>
     <ul>
         <!-- Ajouter un style a la liste (icons)-->
-        <li *ngFor="let theme of data.themes"  [routerLink]="['/liste-des-formations', theme.nom.replace(regexUri, '-'), theme.id]">{{theme.nom}}</li>
+        <li *ngFor="let theme of data.themes"  [routerLink]="['/liste-des-formations', data.nom.replace(regexUri, '-'), data.id, theme.nom.replace(regexUri, '-'), theme.id]">{{theme.nom}}</li>
     </ul>
 </div>
 
