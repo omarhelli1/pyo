@@ -6,4 +6,12 @@ html{
 body{
     height: 100%;
     margin: 0;
+    display: flex;
+    flex-direction: column;
 }
+
+app-root{
+    height: 100%;
+}
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
