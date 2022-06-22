@@ -3,6 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+
 import { NavBarComponent } from './_commons/nav-bar/nav-bar.component';
 import { FooterComponent } from './_commons/footer/footer.component';
 
@@ -14,7 +15,7 @@ import { FooterComponent } from './_commons/footer/footer.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
