@@ -1,4 +1,4 @@
-<table>
+<table *ngIf="theme">
     <thead>
         <tr>
             <th>Libellé</th>
@@ -10,7 +10,7 @@
         <tr *ngFor="let formation of theme.formations; let i = index">
             <td class="td-nom-formation">{{formation.nom}}</td>
             <td>{{txt}}</td>
-            <td>Actions</td>
+            <td [routerLink]="[formation.nom.replace(regexUri, '-'), formation.id]">Actions</td>
         </tr>
     </tbody>
 </table>

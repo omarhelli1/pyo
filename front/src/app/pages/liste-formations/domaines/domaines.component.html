@@ -4,15 +4,10 @@
     </div>
     <ul>
         <!-- Ajouter un style a la liste (icons)-->
-        <li *ngFor="let theme of data.themes"  [routerLink]="['/liste-des-formations', data.nom.replace(regexUri, '-'), data.id, theme.nom.replace(regexUri, '-'), theme.id]">{{theme.nom}}</li>
+        <li *ngFor="let theme of data.themes" [routerLink]="['/liste-des-formations',data.nom.replace(regexUri, '-'), data.id, theme.nom.replace(regexUri, '-'), theme.id]" (click)="onSelectTheme(theme)"> - {{theme.nom}}</li>
     </ul>
 </div>
-
-
-
-
 <!-- <ul>
-        <li *ngFor="let item of domaines" "
-        routerLinkActive="router-link-active">{{item.name}}</li>
+     [routerLink]="['/liste-des-formations',data.nom.replace(regexUri, '-'), data.id, theme.nom.replace(regexUri, '-'), theme.id]"
 
 </ul> -->

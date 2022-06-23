@@ -17,8 +17,8 @@ export class FormationsService {
   private formationSource = new BehaviorSubject({});
   currentFormation = this.formationSource.asObservable();
 
-  private formationByThemeIdSource = new BehaviorSubject(null);
-  currentTheme = this.formationByThemeIdSource.asObservable();
+  private themeSource = new BehaviorSubject(null);
+  currentTheme = this.themeSource.asObservable();
 
   data = []
   themes: any = {}
@@ -30,5 +30,9 @@ export class FormationsService {
         this.data = domaines
       }
     })
+   }
+
+   changeTheme(theme: any){
+    this.themeSource.next(theme)
    }
 }

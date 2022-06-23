@@ -15,11 +15,11 @@ export class ThemesPageComponent implements OnInit {
   domaines: any = {}
   ngOnInit(): void {
     // Partage les donnée depuis le serviceFormation
-    this.subscription = this.formationsService.currentFormation.subscribe((message: any) => {
-      if(message.length){
-        this.domaines = message
-      }
-    })
+    // this.subscription = this.formationsService.currentFormation.subscribe((message: any) => {
+    //   if(message.length){
+    //     this.domaines = message
+    //   }
+    // })
   }
 
 }

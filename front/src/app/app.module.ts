@@ -11,6 +11,7 @@ import { DomainesComponent } from './pages/liste-formations/domaines/domaines.co
 import { NavBarComponent } from './_commons/nav-bar/nav-bar.component';
 import { FooterComponent } from './_commons/footer/footer.component';
 import { DetailsFormationComponent } from './pages/liste-formations/details-formation/details-formation.component';
+import { SidenavComponent } from './_commons/sidenav/sidenav.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { DetailsFormationComponent } from './pages/liste-formations/details-form
     ThemesPageComponent,
     ListeFormationsComponent,
     DomainesComponent,
-    DetailsFormationComponent
+    DetailsFormationComponent,
+    SidenavComponent
   ],
   imports: [
     BrowserModule,
