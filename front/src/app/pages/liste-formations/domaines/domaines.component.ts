@@ -10,15 +10,29 @@ export class DomainesComponent implements OnInit {
   
   // Type todo
   @Input() data: any;
+  isShowThemes: boolean = false
+  isShowSubThemes: boolean = false
+
   regexUri: RegExp = / /g
   constructor(private router: Router, private formationsService: FormationsService) { }
 
   ngOnInit(): void {}
 
   onSelectTheme(theme: any){
-    // console.log(theme);
     this.formationsService.changeTheme(theme);
     // this.router.navigate(["liste-des-formations/"+ this.data.nom.replace(this.regexUri, '-') + "/" + this.data.id + "/" + theme.nom.replace(this.regexUri, '-') + "/" + theme.id])
+  }
+
+  showThemes(){
+    this.isShowThemes = !this.isShowThemes;
+    if(this.isShowSubThemes){
+      this.isShowSubThemes = false;
+    }
+
+  }
+
+  showSubThemes(){
+    this.isShowSubThemes = !this.isShowSubThemes;
   }
 
 }

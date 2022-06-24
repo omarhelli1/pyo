@@ -1,22 +1,73 @@
 .container-domaine{
-padding: 3px;
 p{
     padding: 5px;
+    display: flex;
+    align-items: center;
+    background-color: white;
+    justify-content: space-between;
+    margin: 1px;
 }
     .title-domaine{
         background-color: #f5f5f5;
+        font-weight: 500;
+        font-size: 16px;
 
     }
     ul{
-        width: 300px;
         list-style: none;
         padding: 0;
         margin: 0;
+        font-size: 12px;
+        background-color: white;
         li{
             line-height:19px;
             cursor: pointer;
-            margin:2px;
-            padding: 5px;
+            // margin:2px;
+            // padding: 5px;
+            div{
+                p{
+                    mat-icon{
+                        color: #5280eb;
+                    }
+                    .eye-icon{
+                        font-size: 16px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                    }
+                  
+                }
+                div{
+                    ul{
+                        li{
+                            mat-icon{
+                                font-size: 16px;
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                                color: #5280eb;
+                                
+                            }
+                        }
+                    }
+                }
+            }
+            
+            .container-sous-themes{
+                ul{
+                    li{
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                        background-color: white;
+                        margin: 1px;
+                        padding: 10px;
+                        padding-left: 5px;
+                        font-size: 12px;
+
+                    }
+                }
+            }
         }
     }
 }

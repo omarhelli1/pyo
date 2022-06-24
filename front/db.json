@@ -2,6 +2,413 @@
   "domaines": [
     {
       "id": 2,
+      "nom": "Management 1",
+      "themes": [
+        {
+          "id": 8,
+          "nom": "Formations Management hiérarchique et non hiérarchique T",
+          "parent_id": "null",
+          "domaine_id": "2",
+          "formations": [
+            {
+              "id": 7,
+              "nom": "Management : les fondamentaux"
+            },
+            {
+              "id": 8,
+              "nom": "Nouveau manager"
+            },
+            {
+              "id": 9,
+              "nom": "Le leadership du manager transversal"
+            }
+          ]
+        },
+        {
+          "id": 2,
+          "nom": "Formations Finance et droit pour managers T1",
+          "parent_id": "null",
+          "domaine_id": "2",
+          "themes": [
+            {
+              "id": 8,
+              "nom": "Formations Management hiérarchique et non hiérarchique ST1",
+              "parent_id": "2",
+              "domaine_id": "2",
+              "formations": [
+                {
+                  "id": 7,
+                  "nom": "Management : les fondamentaux"
+                },
+                {
+                  "id": 8,
+                  "nom": "Nouveau manager"
+                },
+                {
+                  "id": 9,
+                  "nom": "Le leadership du manager transversal"
+                }
+              ]
+            },{
+              "id": 8,
+              "nom": "Formations Management hiérarchique et non hiérarchique ST2",
+              "parent_id": "2",
+              "domaine_id": "2",
+              "formations": [
+                {
+                  "id": 7,
+                  "nom": "Management : les fondamentaux"
+                },
+                {
+                  "id": 8,
+                  "nom": "Nouveau manager"
+                },
+                {
+                  "id": 9,
+                  "nom": "Le leadership du manager transversal"
+                }
+              ]
+            },{
+              "id": 8,
+              "nom": "Formations Management hiérarchique et non hiérarchique ST3",
+              "parent_id": "2",
+              "domaine_id": "2",
+              "formations": [
+                {
+                  "id": 7,
+                  "nom": "Management : les fondamentaux"
+                },
+                {
+                  "id": 8,
+                  "nom": "Nouveau manager"
+                },
+                {
+                  "id": 9,
+                  "nom": "Le leadership du manager transversal"
+                }
+              ]
+            }
+          ]
+        }
+       
+      ]
+    },    {
+      "id": 2,
+      "nom": "Management",
+      "themes": [
+        {
+          "id": 2,
+          "nom": "Formations Finance et droit pour managers",
+          "parent_id": "null",
+          "domaine_id": "2",
+          "formations": [
+            {
+              "id": 10,
+              "nom": "Finance pour non-financiers"
+            },
+            {
+              "id": 11,
+              "nom": "Réussir son business plan "
+            },
+            {
+              "id": 12,
+              "nom": "L'essentiel du droit du travail pour managers "
+            }
+          ]
+        },
+        {
+          "id": 8,
+          "nom": "Formations Management hiérarchique et non hiérarchique",
+          "parent_id": "null",
+          "domaine_id": "2",
+          "formations": [
+            {
+              "id": 7,
+              "nom": "Management : les fondamentaux"
+            },
+            {
+              "id": 8,
+              "nom": "Nouveau manager"
+            },
+            {
+              "id": 9,
+              "nom": "Le leadership du manager transversal"
+            }
+          ]
+        }
+      ]
+    },    {
+      "id": 2,
+      "nom": "Management",
+      "themes": [
+        {
+          "id": 2,
+          "nom": "Formations Finance et droit pour managers",
+          "parent_id": "null",
+          "domaine_id": "2",
+          "formations": [
+            {
+              "id": 10,
+              "nom": "Finance pour non-financiers"
+            },
+            {
+              "id": 11,
+              "nom": "Réussir son business plan "
+            },
+            {
+              "id": 12,
+              "nom": "L'essentiel du droit du travail pour managers "
+            }
+          ]
+        },
+        {
+          "id": 8,
+          "nom": "Formations Management hiérarchique et non hiérarchique",
+          "parent_id": "null",
+          "domaine_id": "2",
+          "formations": [
+            {
+              "id": 7,
+              "nom": "Management : les fondamentaux"
+            },
+            {
+              "id": 8,
+              "nom": "Nouveau manager"
+            },
+            {
+              "id": 9,
+              "nom": "Le leadership du manager transversal"
+            }
+          ]
+        }
+      ]
+    },    {
+      "id": 2,
+      "nom": "Management",
+      "themes": [
+        {
+          "id": 2,
+          "nom": "Formations Finance et droit pour managers",
+          "parent_id": "null",
+          "domaine_id": "2",
+          "formations": [
+            {
+              "id": 10,
+              "nom": "Finance pour non-financiers"
+            },
+            {
+              "id": 11,
+              "nom": "Réussir son business plan "
+            },
+            {
+              "id": 12,
+              "nom": "L'essentiel du droit du travail pour managers "
+            }
+          ]
+        },
+        {
+          "id": 8,
+          "nom": "Formations Management hiérarchique et non hiérarchique",
+          "parent_id": "null",
+          "domaine_id": "2",
+          "formations": [
+            {
+              "id": 7,
+              "nom": "Management : les fondamentaux"
+            },
+            {
+              "id": 8,
+              "nom": "Nouveau manager"
+            },
+            {
+              "id": 9,
+              "nom": "Le leadership du manager transversal"
+            }
+          ]
+        }
+      ]
+    },    {
+      "id": 2,
+      "nom": "Management",
+      "themes": [
+        {
+          "id": 2,
+          "nom": "Formations Finance et droit pour managers",
+          "parent_id": "null",
+          "domaine_id": "2",
+          "formations": [
+            {
+              "id": 10,
+              "nom": "Finance pour non-financiers"
+            },
+            {
+              "id": 11,
+              "nom": "Réussir son business plan "
+            },
+            {
+              "id": 12,
+              "nom": "L'essentiel du droit du travail pour managers "
+            }
+          ]
+        },
+        {
+          "id": 8,
+          "nom": "Formations Management hiérarchique et non hiérarchique",
+          "parent_id": "null",
+          "domaine_id": "2",
+          "formations": [
+            {
+              "id": 7,
+              "nom": "Management : les fondamentaux"
+            },
+            {
+              "id": 8,
+              "nom": "Nouveau manager"
+            },
+            {
+              "id": 9,
+              "nom": "Le leadership du manager transversal"
+            }
+          ]
+        }
+      ]
+    },    {
+      "id": 2,
+      "nom": "Management",
+      "themes": [
+        {
+          "id": 2,
+          "nom": "Formations Finance et droit pour managers",
+          "parent_id": "null",
+          "domaine_id": "2",
+          "formations": [
+            {
+              "id": 10,
+              "nom": "Finance pour non-financiers"
+            },
+            {
+              "id": 11,
+              "nom": "Réussir son business plan "
+            },
+            {
+              "id": 12,
+              "nom": "L'essentiel du droit du travail pour managers "
+            }
+          ]
+        },
+        {
+          "id": 8,
+          "nom": "Formations Management hiérarchique et non hiérarchique",
+          "parent_id": "null",
+          "domaine_id": "2",
+          "formations": [
+            {
+              "id": 7,
+              "nom": "Management : les fondamentaux"
+            },
+            {
+              "id": 8,
+              "nom": "Nouveau manager"
+            },
+            {
+              "id": 9,
+              "nom": "Le leadership du manager transversal"
+            }
+          ]
+        }
+      ]
+    },    {
+      "id": 2,
+      "nom": "Management",
+      "themes": [
+        {
+          "id": 2,
+          "nom": "Formations Finance et droit pour managers",
+          "parent_id": "null",
+          "domaine_id": "2",
+          "formations": [
+            {
+              "id": 10,
+              "nom": "Finance pour non-financiers"
+            },
+            {
+              "id": 11,
+              "nom": "Réussir son business plan "
+            },
+            {
+              "id": 12,
+              "nom": "L'essentiel du droit du travail pour managers "
+            }
+          ]
+        },
+        {
+          "id": 8,
+          "nom": "Formations Management hiérarchique et non hiérarchique",
+          "parent_id": "null",
+          "domaine_id": "2",
+          "formations": [
+            {
+              "id": 7,
+              "nom": "Management : les fondamentaux"
+            },
+            {
+              "id": 8,
+              "nom": "Nouveau manager"
+            },
+            {
+              "id": 9,
+              "nom": "Le leadership du manager transversal"
+            }
+          ]
+        }
+      ]
+    },    {
+      "id": 2,
+      "nom": "Management",
+      "themes": [
+        {
+          "id": 2,
+          "nom": "Formations Finance et droit pour managers",
+          "parent_id": "null",
+          "domaine_id": "2",
+          "formations": [
+            {
+              "id": 10,
+              "nom": "Finance pour non-financiers"
+            },
+            {
+              "id": 11,
+              "nom": "Réussir son business plan "
+            },
+            {
+              "id": 12,
+              "nom": "L'essentiel du droit du travail pour managers "
+            }
+          ]
+        },
+        {
+          "id": 8,
+          "nom": "Formations Management hiérarchique et non hiérarchique",
+          "parent_id": "null",
+          "domaine_id": "2",
+          "formations": [
+            {
+              "id": 7,
+              "nom": "Management : les fondamentaux"
+            },
+            {
+              "id": 8,
+              "nom": "Nouveau manager"
+            },
+            {
+              "id": 9,
+              "nom": "Le leadership du manager transversal"
+            }
+          ]
+        }
+      ]
+    },    {
+      "id": 2,
       "nom": "Management",
       "themes": [
         {

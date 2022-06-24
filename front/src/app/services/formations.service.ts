@@ -27,7 +27,7 @@ export class FormationsService {
     this.http.get('http://localhost:3000/domaines').subscribe((domaines: any) =>{
       if(domaines.length > 0){
         this.formationSource.next(domaines)
-        this.data = domaines
+        this.data = domaines        
       }
     })
    }

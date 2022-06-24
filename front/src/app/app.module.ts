@@ -12,7 +12,7 @@ import { NavBarComponent } from './_commons/nav-bar/nav-bar.component';
 import { FooterComponent } from './_commons/footer/footer.component';
 import { DetailsFormationComponent } from './pages/liste-formations/details-formation/details-formation.component';
 import { SidenavComponent } from './_commons/sidenav/sidenav.component';
-
+import {MatIconModule} from '@angular/material/icon'
 @NgModule({
   declarations: [
     AppComponent,
@@ -28,7 +28,8 @@ import { SidenavComponent } from './_commons/sidenav/sidenav.component';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    RouterModule
+    RouterModule,
+    MatIconModule
   ],
   providers: [],
   bootstrap: [AppComponent]

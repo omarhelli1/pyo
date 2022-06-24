@@ -1,10 +1,33 @@
 <div class="container-domaine">
     <div class="title-domaine">
-        <p>{{data.nom}}</p>
+        <p>{{data.nom}} <mat-icon *ngIf="!isShowThemes" (click)="showThemes()">keyboard_arrow_down</mat-icon><mat-icon *ngIf="isShowThemes" (click)="showThemes()">keyboard_arrow_up</mat-icon></p>
     </div>
-    <ul>
+    <ul [hidden]="!isShowThemes">
         <!-- Ajouter un style a la liste (icons)-->
-        <li *ngFor="let theme of data.themes" [routerLink]="['/liste-des-formations',data.nom.replace(regexUri, '-'), data.id, theme.nom.replace(regexUri, '-'), theme.id]" (click)="onSelectTheme(theme)"> - {{theme.nom}}</li>
+        <li *ngFor="let theme of data.themes" [routerLink]="['/liste-des-formations',data.nom.replace(regexUri, '-'), data.id, theme.nom.replace(regexUri, '-'), theme.id]" (click)="onSelectTheme(theme)" [ngStyle]="{'background-color':!theme.themes ? '#f5f5f5' : 'white'}">
+            <div>
+                <p [ngStyle]="{'background-color':!theme.themes ? '#f5f5f5' : 'white'}">
+
+                    {{theme.nom}} 
+                    <mat-icon *ngIf="theme.themes && !isShowSubThemes" (click)="showSubThemes()">keyboard_arrow_down</mat-icon>
+                    <mat-icon *ngIf="theme.themes && isShowSubThemes" (click)="showSubThemes()">keyboard_arrow_up</mat-icon>
+
+                    <mat-icon *ngIf="!theme.themes" class="eye-icon">visibility</mat-icon>
+
+                </p>
+                
+                 <div *ngIf="theme.themes" class="container-sous-themes" [hidden]="!isShowSubThemes">
+                    <ul  [ngStyle]="{'background-color':'#f5f5f5'}">
+                        <li *ngFor="let sousTheme of theme.themes"  [ngStyle]="{'background-color':'#f5f5f5'}">{{sousTheme.nom}} 
+                            <mat-icon class="eye-icon">visibility</mat-icon>
+
+                        </li>
+                     </ul>
+                 </div>
+            </div>
+            
+            
+        </li>
     </ul>
 </div>
 <!-- <ul>
