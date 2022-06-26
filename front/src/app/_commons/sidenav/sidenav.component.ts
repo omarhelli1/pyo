@@ -13,12 +13,10 @@ export class SidenavComponent implements OnInit {
   constructor(private formationsService: FormationsService) { }
 
   ngOnInit(): void {
-    this.subscription = this.formationsService.currentFormation.subscribe((message: any) => {
+    this.subscription = this.formationsService.currentDomaines.subscribe((message: any) => {
       if(message.length){
         this.domaines = message
       }
     })
   }
-  
-
 }

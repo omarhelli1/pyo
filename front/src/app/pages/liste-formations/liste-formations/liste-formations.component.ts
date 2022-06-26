@@ -28,6 +28,17 @@ export class ListeFormationsComponent implements OnInit {
         this.theme = theme
       }
     })
+
+    if(sessionStorage.getItem('liste-formations')){
+      this.theme = sessionStorage.getItem('liste-formations')
+      this.theme = JSON.parse(this.theme)
+    }
+  }
+  
+  showDetailsFormation(formation: any){
+    this.formationsService.detailsFormation(formation);
+    this.router.navigate([this.router.url, formation.nom.replace(this.regexUri, '-'), formation.id])
+    sessionStorage.setItem("details-formation",  JSON.stringify(formation))
   }
 
 }

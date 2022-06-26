@@ -12,7 +12,8 @@ import { NavBarComponent } from './_commons/nav-bar/nav-bar.component';
 import { FooterComponent } from './_commons/footer/footer.component';
 import { DetailsFormationComponent } from './pages/liste-formations/details-formation/details-formation.component';
 import { SidenavComponent } from './_commons/sidenav/sidenav.component';
-import {MatIconModule} from '@angular/material/icon'
+import {MatIconModule} from '@angular/material/icon';
+import { BreadcrumbComponent } from './pages/liste-formations/breadcrumb/breadcrumb.component'
 @NgModule({
   declarations: [
     AppComponent,
@@ -22,7 +23,8 @@ import {MatIconModule} from '@angular/material/icon'
     ListeFormationsComponent,
     DomainesComponent,
     DetailsFormationComponent,
-    SidenavComponent
+    SidenavComponent,
+    BreadcrumbComponent
   ],
   imports: [
     BrowserModule,

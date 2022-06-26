@@ -1,7 +1,7 @@
-import { Injectable } from '@angular/core';
+import { Injectable, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { BehaviorSubject } from 'rxjs';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 
 interface domaines{
   id: string;
@@ -12,21 +12,24 @@ interface domaines{
 @Injectable({
   providedIn: 'root'
 })
-export class FormationsService {
+export class FormationsService  {
 
-  private formationSource = new BehaviorSubject({});
-  currentFormation = this.formationSource.asObservable();
+  private domainesSource = new BehaviorSubject({});
+  currentDomaines = this.domainesSource.asObservable();
 
   private themeSource = new BehaviorSubject(null);
   currentTheme = this.themeSource.asObservable();
 
+  private formationSource = new BehaviorSubject(null);
+  currentFormation = this.formationSource.asObservable();
+
   data = []
   themes: any = {}
 
-  constructor(private http: HttpClient, private route: ActivatedRoute) {
+  constructor(private http: HttpClient, private route: ActivatedRoute, private router: Router) {
     this.http.get('http://localhost:3000/domaines').subscribe((domaines: any) =>{
       if(domaines.length > 0){
-        this.formationSource.next(domaines)
+        this.domainesSource.next(domaines)
         this.data = domaines        
       }
     })
@@ -35,4 +38,9 @@ export class FormationsService {
    changeTheme(theme: any){
     this.themeSource.next(theme)
    }
+
+   detailsFormation(formation: any){
+    this.formationSource.next(formation)
+   }
+
 }

@@ -10,9 +10,9 @@
         <tr *ngFor="let formation of theme.formations; let i = index">
             <td class="td-nom-formation">{{formation.nom}}</td>
             <td>{{txt}}</td>
-            <td [routerLink]="[formation.nom.replace(regexUri, '-'), formation.id]">Actions</td>
+            <td (click)="showDetailsFormation(formation)">Actions</td>
         </tr>
     </tbody>
 </table>
 
-<!--| slice:0:140-->
+<!--| slice:0:140    [routerLink]="[formation.nom.replace(regexUri, '-'), formation.id]"   -->
