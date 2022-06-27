@@ -155,6 +155,16 @@ COLLATE = utf8mb4_0900_ai_ci;
 
 
 -- -----------------------------------------------------
+-- Table `db_fr`.`role`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `db_fr`.`role` (
+  `id` INT NOT NULL AUTO_INCREMENT,
+  `role` VARCHAR(45) NULL,
+  PRIMARY KEY (`id`))
+ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
 -- Table `db_fr`.`utilisateur`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `db_fr`.`utilisateur` (
@@ -163,17 +173,23 @@ CREATE TABLE IF NOT EXISTS `db_fr`.`utilisateur` (
   `prenom` VARCHAR(100) NOT NULL,
   `date_naissance` DATE NOT NULL,
   `entreprise_id` INT NULL DEFAULT NULL,
-  `role` ENUM('formateur', 'client', 'responsable') NOT NULL,
   `service_id` INT NULL DEFAULT NULL,
-  PRIMARY KEY (`id`),
+  `role_id` INT NOT NULL,
+  PRIMARY KEY (`id`, `role_id`),
   INDEX `utilisateur_entreprise_id_entreprise_id` (`entreprise_id` ASC) VISIBLE,
   INDEX `fk_utilisateur_service1_idx` (`service_id` ASC) VISIBLE,
+  INDEX `fk_utilisateur_role1_idx` (`role_id` ASC) VISIBLE,
   CONSTRAINT `fk_utilisateur_service1`
     FOREIGN KEY (`service_id`)
     REFERENCES `db_fr`.`service` (`id`),
   CONSTRAINT `utilisateur_entreprise_id_entreprise_id`
     FOREIGN KEY (`entreprise_id`)
-    REFERENCES `db_fr`.`entreprise` (`id`))
+    REFERENCES `db_fr`.`entreprise` (`id`),
+  CONSTRAINT `fk_utilisateur_role1`
+    FOREIGN KEY (`role_id`)
+    REFERENCES `db_fr`.`role` (`id`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
 ENGINE = InnoDB
 DEFAULT CHARACTER SET = utf8mb4
 COLLATE = utf8mb4_0900_ai_ci;
