@@ -8,6 +8,9 @@ SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,N
 -- Schema mydb
 -- -----------------------------------------------------
 -- -----------------------------------------------------
+-- Schema sakila
+-- -----------------------------------------------------
+-- -----------------------------------------------------
 -- Schema db_fr
 -- -----------------------------------------------------
 
@@ -36,6 +39,7 @@ CREATE TABLE IF NOT EXISTS `db_fr`.`formation` (
   `id` INT NOT NULL AUTO_INCREMENT,
   `nom` VARCHAR(255) NOT NULL,
   `personnalise` TINYINT(1) NOT NULL,
+  `description` TEXT NULL,
   PRIMARY KEY (`id`))
 ENGINE = InnoDB
 DEFAULT CHARACTER SET = utf8mb4
@@ -111,42 +115,22 @@ COLLATE = utf8mb4_0900_ai_ci;
 
 
 -- -----------------------------------------------------
--- Table `db_fr`.`adresse`
--- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `db_fr`.`adresse` (
-  `id` INT NOT NULL AUTO_INCREMENT,
-  `rue` VARCHAR(255) NULL,
-  `num` INT NULL,
-  `ville` VARCHAR(80) NULL,
-  `codePostal` INT NULL,
-  `pays` VARCHAR(255) NULL,
-  PRIMARY KEY (`id`))
-ENGINE = InnoDB;
-
-
--- -----------------------------------------------------
 -- Table `db_fr`.`session`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `db_fr`.`session` (
   `id` INT NOT NULL AUTO_INCREMENT,
   `date` DATETIME NOT NULL,
+  `lieu` VARCHAR(255) NOT NULL,
   `formation_id` INT NOT NULL,
   `prix` INT NOT NULL,
   `lien` VARCHAR(255) NOT NULL,
   `type` ENUM('intra', 'inter') NOT NULL,
   `confirmation_formateur` TINYINT NULL DEFAULT NULL,
-  `adresse_id` INT NOT NULL,
   PRIMARY KEY (`id`),
   INDEX `session_formation_id_formation_id` (`formation_id` ASC) VISIBLE,
-  INDEX `fk_session_adresse1_idx` (`adresse_id` ASC) VISIBLE,
   CONSTRAINT `session_formation_id_formation_id`
     FOREIGN KEY (`formation_id`)
-    REFERENCES `db_fr`.`formation` (`id`),
-  CONSTRAINT `fk_session_adresse1`
-    FOREIGN KEY (`adresse_id`)
-    REFERENCES `db_fr`.`adresse` (`id`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION)
+    REFERENCES `db_fr`.`formation` (`id`))
 ENGINE = InnoDB
 DEFAULT CHARACTER SET = utf8mb4
 COLLATE = utf8mb4_0900_ai_ci;
