@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ThemeCardComponent } from './theme-card.component';
+import { DomainesComponent } from './domaines.component';
 
-describe('ThemeCardComponent', () => {
-  let component: ThemeCardComponent;
-  let fixture: ComponentFixture<ThemeCardComponent>;
+describe('DomainesComponent', () => {
+  let component: DomainesComponent;
+  let fixture: ComponentFixture<DomainesComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ ThemeCardComponent ]
+      declarations: [ DomainesComponent ]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(ThemeCardComponent);
+    fixture = TestBed.createComponent(DomainesComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
