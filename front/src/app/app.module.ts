@@ -13,7 +13,7 @@ import { FooterComponent } from './_commons/footer/footer.component';
 import { DetailsFormationComponent } from './pages/liste-formations/details-formation/details-formation.component';
 import { SidenavComponent } from './_commons/sidenav/sidenav.component';
 import {MatIconModule} from '@angular/material/icon';
-import { BreadcrumbComponent } from './pages/liste-formations/breadcrumb/breadcrumb.component'
+// import { BreadcrumbComponent } from './pages/liste-formations/breadcrumb/breadcrumb.component'
 @NgModule({
   declarations: [
     AppComponent,
@@ -24,7 +24,7 @@ import { BreadcrumbComponent } from './pages/liste-formations/breadcrumb/breadcr
     DomainesComponent,
     DetailsFormationComponent,
     SidenavComponent,
-    BreadcrumbComponent
+    // BreadcrumbComponent
   ],
   imports: [
     BrowserModule,

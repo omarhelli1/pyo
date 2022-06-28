@@ -1,3 +1,5 @@
+@import '../../../../assets/variables.scss';
+
 .container-domaine{
 p{
     padding: 5px;
@@ -18,6 +20,7 @@ p{
     }
     ul{
         list-style: none;
+        // box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
         padding: 0;
         margin: 0;
         font-size: 12px;
@@ -58,6 +61,7 @@ p{
             
             .container-sous-themes{
                 ul{
+                   border-bottom: 1px solid $color-medium;
                     li{
                         display: flex;
                         align-items: center;

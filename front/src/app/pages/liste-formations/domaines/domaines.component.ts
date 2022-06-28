@@ -1,4 +1,4 @@
-import { Component, ElementRef, Input, OnInit, QueryList, Renderer2, ViewChild, ViewChildren } from '@angular/core';
+import { Component, ElementRef, EventEmitter, Input, OnInit, Output, QueryList, Renderer2, ViewChild, ViewChildren } from '@angular/core';
 import { Router } from '@angular/router';
 import { FormationsService } from 'src/app/services/formations.service';
 @Component({
@@ -8,14 +8,13 @@ import { FormationsService } from 'src/app/services/formations.service';
 })
 export class DomainesComponent implements OnInit {
   
-  // Type todo
+  protected isShowThemes: boolean = false;
+  protected isShowSubThemes: boolean = false;
   @Input() data: any;
-  isShowThemes: boolean = false
-  isShowSubThemes: boolean = false
-  @ViewChild("formationElems") formationElems?: QueryList<ElementRef<HTMLElement>>;
-  @ViewChildren('listeElems') listeElems?: QueryList<ElementRef<HTMLElement>>;
-
-  regexUri: RegExp = / /g
+  @ViewChildren("listeUls") listeUls!: QueryList<ElementRef<HTMLElement>>;
+  @Output() messageEvent = new EventEmitter<any>();
+  regexUri: RegExp = / /g;
+  
   constructor(private router: Router, private formationsService: FormationsService, private _renderer: Renderer2) { }
 
   ngOnInit(): void { }
@@ -28,40 +27,14 @@ export class DomainesComponent implements OnInit {
     }
   }
 
-
-
   showThemes(id: number, $event: any) {
-    this.listeElems?.forEach((acc) => {  acc.nativeElement.removeAttribute('class'); })
-    this.listeElems?.first.nativeElement.removeAttribute("class")
-    // close all open items using renderer
-    // get current target
-    const currentTarget = $event.target;
-    // // get next html element using renderer
-    const currentAccordeon = this._renderer.nextSibling(currentTarget);
-    this.isShowThemes = !this.isShowThemes;
-    this.isShowSubThemes = false
-
-    // // remove class using renderer
-    // this._renderer.removeClass(currentAccordeon, 'hidden');
+   if(this.isShowThemes){
+    this.isShowThemes = !this.isShowThemes
+   }else {
+    this.messageEvent.emit(true)
+    this.isShowThemes = true
+   }
   }
-
-
-
-
-
-
-
-  // showThemes(id: any){
-  //   // console.log(this.listeElem?.nativeElement.setAttribute("hidden", 'false'));
-  //   this.listeElem?.nativeElement.setAttribute.hidden.value == "'false'";
-  //   console.log(this.listeElem?.nativeElement.setAttribute.hidden.value);
-    
-  //   // this.isShowThemes = !this.isShowThemes;
-  //   if(this.isShowSubThemes){
-  //     this.isShowSubThemes = false;
-  //   }
-
-  // }
 
   showSubThemes(){
     this.isShowSubThemes = !this.isShowSubThemes;

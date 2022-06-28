@@ -5,7 +5,7 @@
     }
     .card-details-formation{
         width: auto;
-        width: 80%;
+        width: 100%;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -24,8 +24,6 @@
                     .bg-img{
                         width: 100%;
                         height: 200px;
-                        // background-image: url("../../../../assets/images/reverse-image-search.webp");
-                        // background-size: contain;
                         opacity: 0.4;
                         position: relative;
                         display: flex;
