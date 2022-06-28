@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ThemesPageComponent } from './pages/liste-formations/themes-page/themes-page.component';
@@ -14,6 +13,7 @@ import { DetailsFormationComponent } from './pages/liste-formations/details-form
 import { SidenavComponent } from './_commons/sidenav/sidenav.component';
 import {MatIconModule} from '@angular/material/icon';
 // import { BreadcrumbComponent } from './pages/liste-formations/breadcrumb/breadcrumb.component'
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -24,7 +24,6 @@ import {MatIconModule} from '@angular/material/icon';
     DomainesComponent,
     DetailsFormationComponent,
     SidenavComponent,
-    // BreadcrumbComponent
   ],
   imports: [
     BrowserModule,
