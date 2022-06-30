@@ -6,7 +6,7 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HomePageComponent } from './pages/home-page/home-page.component';
 import { FooterComponentComponent } from './_commons/footer/footer-component/footer-component.component';
-import { FooterColComponentComponent } from './_commons/footer/footer-col-component/footer-col-component.component';
+
 import { MatCardModule} from '@angular/material/card';
 import { ThemesPageComponent } from './pages/liste-formations/themes-page/themes-page.component';
 import { HttpClientModule } from '@angular/common/http';
@@ -18,13 +18,15 @@ import { FooterComponent } from './_commons/footer/footer.component';
 import { DetailsFormationComponent } from './pages/liste-formations/details-formation/details-formation.component';
 import { SidenavComponent } from './_commons/sidenav/sidenav.component';
 import { MatIconModule} from '@angular/material/icon';
+import { Navside2Component } from './_commons/navside2/navside2.component';
+import { CardSessionComponent } from './pages/liste-sessionsDeFormations/card-session/card-session.component';
+
 // import { BreadcrumbComponent } from './pages/liste-formations/breadcrumb/breadcrumb.component'
 
 @NgModule({
   declarations: [
     AppComponent,
     FooterComponentComponent,
-    FooterColComponentComponent,
     HomePageComponent,
     NavBarComponent,
     FooterComponent,
@@ -33,6 +35,9 @@ import { MatIconModule} from '@angular/material/icon';
     DomainesComponent,
     DetailsFormationComponent,
     SidenavComponent,
+    Navside2Component,
+    CardSessionComponent
+
   ],
   imports: [
     BrowserModule,

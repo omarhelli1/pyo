@@ -1,15 +1,24 @@
-ICI VIENDRA LA NAVBAR !!!!
 
 
-<div class="container_g">
-  <div class="row">
-    <div class="aside">
-      <div class="nav-left">
-        <div class="subMenuContainer">
-          <h2>Catalogue des Formations</h2>
+          <div class="container-cards-sessions">
 
-          <div class="span">
-            <div id="Element1">Element 1</div>
+
+  <app-card-session *ngFor="let session of formations" [dataSession]="session"></app-card-session>
+
+
+          </div>
+
+
+
+
+
+         <!-- <div class="span">
+            <div id="Element1"> <app-details-formation ngFor ="let formation of formations.session"  >
+
+            </app-details-formation>
+            <mat-card  >
+              <mat-card-subtitle> La carte de la formation</mat-card-subtitle>
+            </mat-card></div>
             <div id="Element2">Element 2</div>
             <div id="Element3">Element 3</div>
             <div id="Element4">Element 4</div>
@@ -20,32 +29,23 @@ ICI VIENDRA LA NAVBAR !!!!
           </div>
         </div>
       </div>
-      <div class="articles">
-        <div class="nav-right">
-          <div class="row">
-          <!-- <div class="span"> -->
-            <mat-card  >Simple card
-              <mat-card-subtitle> La carte de la formation</mat-card-subtitle>
-            </mat-card>
-          <!-- </div> -->
-           <!-- <div class="span"> -->
-            <mat-card >Simple card
-              <mat-card-subtitle> La carte de la formation2</mat-card-subtitle>
-            </mat-card>
-          <!-- </div> -->
-            <!-- <div class="span"> -->
-              <mat-card  >Simple card
+
+            <div class="span"> -->
+              <!-- <mat-card  >Simple card
                 <mat-card-subtitle> La carte de la formation3</mat-card-subtitle>
-              </mat-card>
+              </mat-card> -->
             <!-- </div> -->
              <!-- <div class="span"> -->
-              <mat-card >Simple card
+              <!-- <mat-card >Simple card
                 <mat-card-subtitle> La carte de la formation4</mat-card-subtitle>
-              </mat-card>
+              </mat-card> -->
             <!-- </div> -->
-        </div>
+        <!-- </div>
         </div>
       </div>
     </div>
   </div>
-</div>
+</div> -->
+
+
+

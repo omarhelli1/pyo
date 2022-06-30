@@ -12,12 +12,39 @@
           "formations": [
             {
               "id": 7,
-              "nom": "Management : les fondamentaux"
-              
+              "nom": "Management : les fondamentaux",
+              "description":" nous avons des formations en ligne et des foemations en présentiel voici la liste des",
+              "sessions":[
+                {
+                  "id":0,
+                  "date": "2022-06-02",
+                  "formation_id": 1,
+                  "prix":1750,
+                  "lien":"string",
+                  "type": "intra",
+                  "confirmation_formateur": false,
+                  "adresse_id": 3
+
+                  }
+              ]
+
             },
             {
               "id": 8,
-              "nom": "Nouveau manager"
+              "nom": "Nouveau manager",
+              "description": " nous avons des formations en ligne et des foemations en présentiel voici la liste des",
+              "sessions":[
+                {
+                "id":1,
+                "date": "2022-06-06",
+                "formation_id": 2,
+                "prix":1780,
+                "lien":"href",
+                "type": "extra",
+                "confirmation_formateur": false,
+                "adresse_id": 4
+              }
+            ]
             },
             {
               "id": 9,
@@ -45,6 +72,7 @@
                   "id": 9,
                   "nom": "Le leadership du manager transversal"
                 }
+
               ]
             },{
               "id": 8,
@@ -79,11 +107,12 @@
                   "id": 9,
                   "nom": "Le leadership du manager transversal"
                 }
+
               ]
             }
           ]
         }
-       
+
       ]
     },    {
       "id": 3,
@@ -484,6 +513,58 @@
         }
       ]
     }
-    
+
+  ],
+
+  "sessions": [
+    {
+  "id":0,
+  "date": "2022-06-02",
+  "formation_id": 1,
+  "prix":1750,
+  "lien":"string",
+  "type": "intra",
+  "confirmation_formateur": false,
+  "adresse_id": 3
+
+  },
+  {
+    "id":1,
+    "date": "2022-06-06",
+    "formation_id": 2,
+    "prix":1780,
+    "lien":"href",
+    "type": "extra",
+    "confirmation_formateur": false,
+    "adresse_id": 4
+  }
+  ,
+  {
+    "id":3,
+    "date": "2022-06-02",
+    "formation_id":2,
+    "prix":1430,
+    "lien":"string",
+    "type": "intra",
+    "confirmation_formateur": false,
+    "adresse_id": 5
+
+    },
+    {
+      "id":15,
+      "date": "2022-06-06",
+      "formation_id": 7,
+      "prix":1250,
+      "lien":"xxxx",
+      "type": "extra",
+      "confirmation_formateur": false,
+      "adresse_id": 3
+    }
+
+
   ]
+
 }
+
+
+
