@@ -1,10 +1,9 @@
 .main{
-    display: flex;
+    // display: flex;
     justify-content: center;
-    margin-left: 400px;
+    margin-top: 100px;
     min-height: 100vh;
     padding: 30px;
-    margin-top: 100px;
 }
 
 app-nav-bar{
@@ -20,6 +19,5 @@ app-sidenav{
 
 .container-content{
     display: flex;
-    min-height: 100vh;
 }
 
