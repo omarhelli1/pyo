@@ -2,17 +2,22 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { ThemesPageComponent } from './pages/liste-formations/themes-page/themes-page.component';
+import { ThemesPageComponent } from './pages/formations-page/themes-page/themes-page.component';
 import { HttpClientModule } from '@angular/common/http';
-import { ListeFormationsComponent } from './pages/liste-formations/liste-formations/liste-formations.component';
+import { ListeFormationsComponent } from './pages/formations-page/liste-formations/liste-formations.component';
 import { RouterModule } from '@angular/router';
-import { DomainesComponent } from './pages/liste-formations/domaines/domaines.component';
+import { DomainesComponent } from './pages/formations-page/domaines/domaines.component';
 import { NavBarComponent } from './_commons/nav-bar/nav-bar.component';
 import { FooterComponent } from './_commons/footer/footer.component';
-import { DetailsFormationComponent } from './pages/liste-formations/details-formation/details-formation.component';
-import { SidenavComponent } from './_commons/sidenav/sidenav.component';
+import { DetailsFormationComponent } from './pages/formations-page/details-formation/details-formation.component';
+import { SidenavComponent } from './pages/formations-page/sidenav/sidenav.component';
 import {MatIconModule} from '@angular/material/icon';
+import { FormationsPageComponent } from './pages/formations-page/formations-page.component';
+import { HomeFormationsComponent } from './pages/formations-page/home-formations/home-formations.component';
 // import { BreadcrumbComponent } from './pages/liste-formations/breadcrumb/breadcrumb.component'
+import {BreadcrumbModule} from 'primeng/breadcrumb';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
 
 @NgModule({
   declarations: [
@@ -24,13 +29,17 @@ import {MatIconModule} from '@angular/material/icon';
     DomainesComponent,
     DetailsFormationComponent,
     SidenavComponent,
+    FormationsPageComponent,
+    HomeFormationsComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     RouterModule,
-    MatIconModule
+    MatIconModule,
+    BreadcrumbModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
