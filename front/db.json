@@ -13,7 +13,7 @@
             {
               "id": 7,
               "nom": "Management : les fondamentaux"
-              
+
             },
             {
               "id": 8,
@@ -24,66 +24,7 @@
               "nom": "Le leadership du manager transversal"
             }
           ]
-        },
-        {
-          "id": 2,
-          "nom": "Formations Finance et droit pour managers T1",
-          "parent_id": "null",
-          "domaine_id": "2",
-          "themes": [
-            {
-              "id": 8,
-              "nom": "Formations Management hiérarchique et non hiérarchique ST1",
-              "parent_id": "2",
-              "domaine_id": "2",
-              "formations": [
-                {
-                  "id": 8,
-                  "nom": "Nouveau manager"
-                },
-                {
-                  "id": 9,
-                  "nom": "Le leadership du manager transversal"
-                }
-              ]
-            },{
-              "id": 8,
-              "nom": "Formations Management hiérarchique et non hiérarchique ST2",
-              "parent_id": "2",
-              "domaine_id": "2",
-              "formations": [
-                {
-                  "id": 7,
-                  "nom": "Management : les fondamentaux"
-                },
-                {
-                  "id": 8,
-                  "nom": "Nouveau manager"
-                }
-              ]
-            },{
-              "id": 8,
-              "nom": "Formations Management hiérarchique et non hiérarchique ST3",
-              "parent_id": "2",
-              "domaine_id": "2",
-              "formations": [
-                {
-                  "id": 7,
-                  "nom": "Management : les fondamentaux"
-                },
-                {
-                  "id": 8,
-                  "nom": "Nouveau manager"
-                },
-                {
-                  "id": 9,
-                  "nom": "Le leadership du manager transversal"
-                }
-              ]
-            }
-          ]
         }
-       
       ]
     },    {
       "id": 3,
