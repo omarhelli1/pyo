@@ -11,7 +11,7 @@ export class HomePageComponent implements OnInit {
   constructor(private sessionsService: SessionsService) {}
 
   formations: any;
- 
+
 
   ngOnInit(): void {
     this.subscription = this.sessionsService.currentFormation.subscribe(
@@ -27,4 +27,5 @@ export class HomePageComponent implements OnInit {
       }
     );
   }
+
 }

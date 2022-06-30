@@ -2,40 +2,38 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-// design include
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { HomePageComponent } from './pages/home-page/home-page.component';
-import { FooterComponentComponent } from './_commons/footer/footer-component/footer-component.component';
-
-import { MatCardModule} from '@angular/material/card';
-import { ThemesPageComponent } from './pages/liste-formations/themes-page/themes-page.component';
 import { HttpClientModule } from '@angular/common/http';
-import { ListeFormationsComponent } from './pages/liste-formations/liste-formations/liste-formations.component';
+import { ListeFormationsComponent } from './pages/formations-page/liste-formations/liste-formations.component';
 import { RouterModule } from '@angular/router';
-import { DomainesComponent } from './pages/liste-formations/domaines/domaines.component';
+import { DomainesComponent } from './pages/formations-page/domaines/domaines.component';
 import { NavBarComponent } from './_commons/nav-bar/nav-bar.component';
 import { FooterComponent } from './_commons/footer/footer.component';
-import { DetailsFormationComponent } from './pages/liste-formations/details-formation/details-formation.component';
-import { SidenavComponent } from './_commons/sidenav/sidenav.component';
-import { MatIconModule} from '@angular/material/icon';
 import { Navside2Component } from './_commons/navside2/navside2.component';
 import { CardSessionComponent } from './pages/liste-sessionsDeFormations/card-session/card-session.component';
-
+import { DetailsFormationComponent } from './pages/formations-page/details-formation/details-formation.component';
+import { SidenavComponent } from './pages/formations-page/sidenav/sidenav.component';
+import {MatIconModule} from '@angular/material/icon';
+import {MatCardModule} from '@angular/material/card';
+import { FormationsPageComponent } from './pages/formations-page/formations-page.component';
+import { HomeFormationsComponent } from './pages/formations-page/home-formations/home-formations.component';
 // import { BreadcrumbComponent } from './pages/liste-formations/breadcrumb/breadcrumb.component'
+import {BreadcrumbModule} from 'primeng/breadcrumb';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { HomePageComponent } from './pages/home-page/home-page.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
-    FooterComponentComponent,
     HomePageComponent,
     NavBarComponent,
     FooterComponent,
-    ThemesPageComponent,
     ListeFormationsComponent,
     DomainesComponent,
     DetailsFormationComponent,
     SidenavComponent,
-    Navside2Component,
+    FormationsPageComponent,
+    HomeFormationsComponent,
     CardSessionComponent
 
   ],
@@ -43,10 +41,14 @@ import { CardSessionComponent } from './pages/liste-sessionsDeFormations/card-se
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    MatCardModule,
     HttpClientModule,
     RouterModule,
-    MatIconModule
+    MatIconModule,
+    MatCardModule,
+    BreadcrumbModule,
+    BrowserAnimationsModule
+
+
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,8 +1,23 @@
 .main{
     // display: flex;
     justify-content: center;
-    // align-items: center;
-    width: 100%;
-    margin-left: 400px;
+    margin-top: 100px;
+    min-height: 100vh;
     padding: 30px;
 }
+
+app-nav-bar{
+    position: absolute;
+    width: 100%;
+    left: 0;
+}
+
+app-sidenav{
+    margin-top: 100px;
+    height: 100%;
+}
+
+.container-content{
+    display: flex;
+}
+

@@ -1,4 +1,28 @@
-.nav{
+
+.tablink {
+    width: 90px;
+    height: 30px;
+    background-color: rgb(242, 139, 48, 0.6);
+    margin-top: 5px;
+}
+
+.Pyo_logo {
+    width: 135px;
+    height: 45px;
+    margin-top: 5px;
+  }
+
+  .navbar{
+    width: auto;
     height: 90px;
+    // background-color: rgb(65, 88, 217,0.8);
+    border-bottom: 3px solid rgb(242, 139, 48, 0.6);
+}
+// .nav{
+//     height: 90px;
+//     width: 100%;
+// }
+.nav{
+    height: 80px;
     width: 100%;
 }

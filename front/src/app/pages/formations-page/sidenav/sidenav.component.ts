@@ -1,7 +1,7 @@
 import { Component, ElementRef, OnInit, QueryList, Renderer2, ViewChild, ViewChildren } from '@angular/core';
 import { Subscription } from 'rxjs';
 import { FormationsService } from 'src/app/services/formations.service';
-import { DomainesComponent } from 'src/app/pages/liste-formations/domaines/domaines.component';
+import { DomainesComponent } from 'src/app/pages/formations-page/domaines/domaines.component';
 @Component({
   selector: 'app-sidenav',
   templateUrl: './sidenav.component.html',

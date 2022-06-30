@@ -14,6 +14,7 @@ export class SessionsService{
 
   data = []
   sessions: any = {}
+  static currentSession: any;
 
   constructor(private http: HttpClient, private route: ActivatedRoute, private router: Router) {
     this.http.get('http://localhost:3000/sessions').subscribe((sessions: any) =>{
