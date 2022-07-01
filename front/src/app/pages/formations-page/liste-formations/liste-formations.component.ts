@@ -12,7 +12,7 @@ import { FormationsService } from 'src/app/services/formations.service';
 export class ListeFormationsComponent implements OnInit {
 
   constructor(private router: Router, private route: ActivatedRoute, private formationsService: FormationsService) {
-    
+
    }
   txt: string = "Le lorem ipsum est, en imprimerie, une suite de mots sans signification utilisée à titre provisoire pour calibrer une mise en page, le texte définitif venant remplacer le faux-texte dès qu'il est prêt ou que la mise en page est achevée. Généralement, on utilise un texte en faux latin, le Lorem ipsum ou Lipsum"
   subscription!: Subscription;
@@ -36,7 +36,7 @@ export class ListeFormationsComponent implements OnInit {
       this.theme = JSON.parse(this.theme)
     }
   }
-  
+
   showDetailsFormation(formation: any){
   
     
