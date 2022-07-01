@@ -20,7 +20,9 @@ export class DomainesComponent implements OnInit {
   ngOnInit(): void { }
 
   showListFormation(theme: any){
-    if(theme.formations){
+    
+    if(theme.formation.length > 0){
+      
       this.router.navigate(['/liste-des-formations',this.data.nom.replace(this.regexUri, '-'), this.data.id, theme.nom.replace(this.regexUri, '-'), theme.id], { state: { hello: 'world' } });
       this.formationsService.changeTheme(theme);
       sessionStorage.setItem('liste-formations', JSON.stringify(theme) );

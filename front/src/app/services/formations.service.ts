@@ -1,5 +1,5 @@
 import { Injectable, OnInit } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { BehaviorSubject } from 'rxjs';
 import { ActivatedRoute, Router } from '@angular/router';
 
@@ -23,20 +23,34 @@ export class FormationsService  {
   private formationSource = new BehaviorSubject(null);
   currentFormation = this.formationSource.asObservable();
 
+  private breadcrumbSource = new BehaviorSubject(null);
+  currentBreadcrumb = this.breadcrumbSource.asObservable();
+
   data = []
   themes: any = {}
-
   constructor(private http: HttpClient, private route: ActivatedRoute, private router: Router) {
-    this.http.get('http://localhost:3000/domaines').subscribe((domaines: any) =>{
+    this.http.get('http://localhost:8080/domaines').subscribe((domaines: any) =>{
       if(domaines.length > 0){
         this.domainesSource.next(domaines)
-        this.data = domaines        
+        this.data = domaines  
+              
       }
     })
+
+    
+   }
+
+   getDataBreadcrumb(label: any){
+    
+    this.breadcrumbSource.next(label)
    }
 
    changeTheme(theme: any){
+    
+    
     this.themeSource.next(theme)
+    // console.log(this.route.url._value);
+
    }
 
    detailsFormation(formation: any){
