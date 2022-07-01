@@ -19,13 +19,15 @@ export class ListeFormationsComponent implements OnInit {
   domaines: any = {}
   theme!: any
   regexUri: RegExp = / /g
-
+  items: any = [];
 
   ngOnInit(): void {
 
     this.subscription = this.formationsService.currentTheme.subscribe((theme: any) => {
       if(theme){
         this.theme = theme
+        this.formationsService.getDataBreadcrumb({label: theme.nom, item: 'theme'});
+        
       }
     })
 
@@ -36,6 +38,8 @@ export class ListeFormationsComponent implements OnInit {
   }
   
   showDetailsFormation(formation: any){
+  
+    
     this.formationsService.detailsFormation(formation);
     this.router.navigate([this.router.url, formation.nom.replace(this.regexUri, '-'), formation.id])
     sessionStorage.setItem("details-formation",  JSON.stringify(formation))

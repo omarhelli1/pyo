@@ -15,6 +15,8 @@ export class DetailsFormationComponent implements OnInit {
     this.subscription = this.formationsService.currentFormation.subscribe((formation: any) => {
       if(formation){
         this.formation = formation
+        this.formationsService.getDataBreadcrumb({label: formation.nom, item: 'formation'});
+
       }
     })
     if(sessionStorage.getItem('details-formation')){

@@ -1,8 +1,15 @@
+
+.container-home-formations{
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+}
+
 app-sidenav{
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 400px;
-    /* height: 100%; */
-    top: 100px;
+    // position: absolute;
+    // left: 0;
+    // bottom: 0;
+    // width: 400px;
+    // /* height: 100%; */
+    // top: 100px;
 }
