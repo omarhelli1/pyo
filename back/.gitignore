@@ -31,3 +31,6 @@ build/
 
 ### VS Code ###
 .vscode/
+/docker
+/bin/docker
+/bin/.metadata
