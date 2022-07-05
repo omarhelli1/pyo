@@ -20,7 +20,9 @@ import { HomeFormationsComponent } from './pages/formations-page/home-formations
 import {BreadcrumbModule} from 'primeng/breadcrumb';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HomePageComponent } from './pages/home-page/home-page.component';
-
+import { FormulaireInscriptionClientComponent } from './pages/formulaire-inscription-client/formulaire-inscription-client.component';
+import { InscriptionClientComponent } from './pages/inscription-client/inscription-client.component';
+import { DomainesUlComponent } from './pages/formations-page/domaines-ul/domaines-ul.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +36,10 @@ import { HomePageComponent } from './pages/home-page/home-page.component';
     SidenavComponent,
     FormationsPageComponent,
     HomeFormationsComponent,
-    CardSessionComponent
+    CardSessionComponent,
+    FormulaireInscriptionClientComponent,
+    InscriptionClientComponent,
+    DomainesUlComponent,
 
   ],
   imports: [
