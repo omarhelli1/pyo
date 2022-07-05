@@ -13,6 +13,7 @@ export class FormationsPageComponent implements OnInit {
   items = [{label: 'Liste des formations', item: "first"}];
   subscription?: Subscription
   isShowBreadcrumb = true
+  getElemRoute: any
     constructor(private route: Router, private formationsService: FormationsService) {
     
   }
@@ -22,7 +23,9 @@ export class FormationsPageComponent implements OnInit {
 
   ngOnInit(): void {
 
-
+    this.getElemRoute = this.route.url.split('/')[this.route.url.split('/').length - 1];
+    console.log(this.getElemRoute);
+    
 
     // this.subscription = this.formationsService.currentBreadcrumb.subscribe((label: any) => {
     //   this.isShowBreadcrumb = false

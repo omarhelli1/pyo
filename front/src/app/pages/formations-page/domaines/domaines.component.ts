@@ -18,12 +18,11 @@ export class DomainesComponent implements OnInit {
   constructor(private router: Router, private formationsService: FormationsService, private _renderer: Renderer2) { }
 
   ngOnInit(): void { }
-
   showListFormation(theme: any){
     
     if(theme.formation.length > 0){
       
-      this.router.navigate(['/liste-des-formations',this.data.nom.replace(this.regexUri, '-'), this.data.id, theme.nom.replace(this.regexUri, '-'), theme.id], { state: { hello: 'world' } });
+      this.router.navigate(['/liste-des-formations',this.data.nom.replace(this.regexUri, '-'), this.data.id, theme.nom.replace(this.regexUri, '-'), theme.id]);
       this.formationsService.changeTheme(theme);
       sessionStorage.setItem('liste-formations', JSON.stringify(theme) );
     }

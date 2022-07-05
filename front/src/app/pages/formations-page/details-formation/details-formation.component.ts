@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Subscription } from 'rxjs';
 import { FormationsService } from 'src/app/services/formations.service';
+import { Router, ActivatedRoute } from '@angular/router';
 @Component({
   selector: 'app-details-formation',
   templateUrl: './details-formation.component.html',
@@ -8,10 +9,15 @@ import { FormationsService } from 'src/app/services/formations.service';
 })
 export class DetailsFormationComponent implements OnInit {
 
-  constructor(private formationsService: FormationsService) { }
+  constructor(private formationsService: FormationsService, protected router: Router, protected route: ActivatedRoute) { }
   subscription?: Subscription
   formation: any
+  getElemRoute?: string;
   ngOnInit(): void {
+    console.log(this.route.snapshot.routeConfig?.children);
+    this.getElemRoute = this.router.url.split('/')[this.router.url.split('/').length - 1];
+    console.log(this.getElemRoute);
+    
     this.subscription = this.formationsService.currentFormation.subscribe((formation: any) => {
       if(formation){
         this.formation = formation
