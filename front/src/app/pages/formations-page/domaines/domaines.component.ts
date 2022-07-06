@@ -22,7 +22,7 @@ export class DomainesComponent implements OnInit {
     
     if(theme.formation.length > 0){
       
-      this.router.navigate(['/liste-des-formations',this.data.nom.replace(this.regexUri, '-'), this.data.id, theme.nom.replace(this.regexUri, '-'), theme.id]);
+      this.router.navigate(['/catalogue', 'liste-des-formations', this.data.nom.replace(this.regexUri, '-'), this.data.id, theme.nom.replace(this.regexUri, '-'), theme.id]);
       this.formationsService.changeTheme(theme);
       sessionStorage.setItem('liste-formations', JSON.stringify(theme) );
     }
