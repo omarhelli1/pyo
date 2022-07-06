@@ -45,4 +45,10 @@ export class ListeFormationsComponent implements OnInit {
     sessionStorage.setItem("details-formation",  JSON.stringify(formation))
   }
 
+  login(formation: any){
+    this.formationsService.detailsFormation(formation);
+    this.router.navigate([this.router.url, formation.nom.replace(this.regexUri, '-'), formation.id, 'inscription-client'])
+    sessionStorage.setItem("details-formation",  JSON.stringify(formation))
+  }
+
 }

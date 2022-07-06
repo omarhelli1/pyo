@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { NavBarComponent } from './nav-bar.component';
+import { DomainesUlComponent } from './domaines-ul.component';
 
-describe('NavBarColComponentComponent', () => {
-  let component: NavBarComponent;
-  let fixture: ComponentFixture<NavBarComponent>;
+describe('DomainesUlComponent', () => {
+  let component: DomainesUlComponent;
+  let fixture: ComponentFixture<DomainesUlComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ NavBarComponent ]
+      declarations: [ DomainesUlComponent ]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(NavBarComponent);
+    fixture = TestBed.createComponent(DomainesUlComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

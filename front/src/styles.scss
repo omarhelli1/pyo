@@ -1,7 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
 @import url('https://fonts.googleapis.com/css2?family=Biryani:wght@300&family=Roboto:wght@1,300&display=swap');
 html{
-    height: 100vh;
+    min-height: 100vh;
 }
 
 body{
@@ -25,12 +25,39 @@ app-root{
 
 app-liste-formations{
     width: 100%;
+    // display: flex;
     table{
         width: 100%;
     }
 }
 
-app-formations-page{
+app-formations-page, app-inscription-client{
     height: 100%;
     display: flex;
+
+}
+app-home-page, app-formations-page, app-inscription-client{
+    margin-top: 100px;
+} 
+
+app-formations-page{
+    margin-left: 12%;
+    margin-right: 12%;
+    min-height: inherit;
+}
+
+app-formulaire-inscription-client{
+    width: 85%;
+    margin-right: 25%;
+    margin-bottom: 15px;
+}
+
+app-home-page{
+    display: flex;
+    flex-direction: column;
+}
+
+app-home-formations{
+    display: flex;
+    justify-content: center;
 }
