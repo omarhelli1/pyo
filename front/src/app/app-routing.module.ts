@@ -7,10 +7,16 @@ import { FormationsPageComponent } from './pages/formations-page/formations-page
 import { HomeFormationsComponent } from './pages/formations-page/home-formations/home-formations.component';
 import { FormulaireInscriptionClientComponent } from './pages/formulaire-inscription-client/formulaire-inscription-client.component';
 import { InscriptionClientComponent } from './pages/inscription-client/inscription-client.component';
+import { RechercheComponent } from './pages/moteurRecherche/recherche/recherche.component';
+import { FormCreateFormationComponent } from './pages/formulaire-create-formation/form-create-formation/form-create-formation.component';
+
+
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
   { path: 'home', component: HomePageComponent },
   { path: 'inscription-client', component: InscriptionClientComponent},
+{ path: 'recherche', component: RechercheComponent },
+{ path: 'formCreerFormation', component: FormCreateFormationComponent },
   {
     path: 'liste-des-formations',
     component: FormationsPageComponent,
@@ -29,7 +35,7 @@ const routes: Routes = [
 
         ]
       },
-     
+
     ],
   },
 ];
