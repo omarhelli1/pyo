@@ -6,11 +6,11 @@
 />
 <nav class="navbar">
   <div class="container-fluid">
-    <img
+    <button class="button" routerLink="/home"> <img
       class="Pyo_logo"
       src="/assets/images/Pyo_logo.png"
       alt="PYO Information"
-    />
+    /></button>
     <div class="button">
       <button class="tablink" routerLink="/liste-des-formations">
         Catalogue
@@ -21,12 +21,13 @@
       <button class="tablink" onclick="open('Contact', this, 'Contact')">
         Contact
       </button>
-      <button class="tablink" onclick="open('Recherche', this, 'Recherche')">
+      <button class="tablink" routerLink="/recherche">
         Recherche
       </button>
       <button class="tablink" onclick="open('Connexion', this, 'Connexion')">
         Connexion
       </button>
+
     </div>
   </div>
 </nav>

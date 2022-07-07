@@ -20,8 +20,8 @@ import { HomeFormationsComponent } from './pages/formations-page/home-formations
 import {BreadcrumbModule} from 'primeng/breadcrumb';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HomePageComponent } from './pages/home-page/home-page.component';
-import { RechercheComponent } from './_commons/nav-bar/moteurRecherche/recherche/recherche.component';
-
+import { RechercheComponent } from './pages/moteurRecherche/recherche/recherche.component';
+import { FormCreateFormationComponent } from './pages/formulaire-create-formation/form-create-formation/form-create-formation.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +36,8 @@ import { RechercheComponent } from './_commons/nav-bar/moteurRecherche/recherche
     FormationsPageComponent,
     HomeFormationsComponent,
     CardSessionComponent,
-    RechercheComponent
+    RechercheComponent,
+    FormCreateFormationComponent
 
   ],
   imports: [
