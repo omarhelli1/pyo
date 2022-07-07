@@ -21,9 +21,8 @@ import {BreadcrumbModule} from 'primeng/breadcrumb';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HomePageComponent } from './pages/home-page/home-page.component';
 import { FormulaireInscriptionClientComponent } from './pages/formulaire-inscription-client/formulaire-inscription-client.component';
-import { InscriptionClientComponent } from './pages/inscription-client/inscription-client.component';
 import { DomainesUlComponent } from './pages/formations-page/domaines-ul/domaines-ul.component';
-
+import { ReactiveFormsModule } from '@angular/forms';
 @NgModule({
   declarations: [
     AppComponent,
@@ -38,9 +37,7 @@ import { DomainesUlComponent } from './pages/formations-page/domaines-ul/domaine
     HomeFormationsComponent,
     CardSessionComponent,
     FormulaireInscriptionClientComponent,
-    InscriptionClientComponent,
-    DomainesUlComponent,
-
+    DomainesUlComponent
   ],
   imports: [
     BrowserModule,
@@ -51,7 +48,8 @@ import { DomainesUlComponent } from './pages/formations-page/domaines-ul/domaine
     MatIconModule,
     MatCardModule,
     BreadcrumbModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    ReactiveFormsModule
 
 
   ],

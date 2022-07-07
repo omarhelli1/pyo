@@ -25,10 +25,6 @@ export class SessionsService{
     })
    }
 
-  //  changeSession(session: any){
-  //   this.formationSource.next(session)
-  //  }
-
    detailsFormation(formation: any){
     this.formationSource.next(formation)
    }

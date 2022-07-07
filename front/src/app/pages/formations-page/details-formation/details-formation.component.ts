@@ -16,13 +16,12 @@ export class DetailsFormationComponent implements OnInit {
   ngOnInit(): void {
     console.log(this.route.snapshot.routeConfig?.children);
     this.getElemRoute = this.router.url.split('/')[this.router.url.split('/').length - 1];
-    console.log(this.getElemRoute);
-    
     this.subscription = this.formationsService.currentFormation.subscribe((formation: any) => {
       if(formation){
+        console.log(formation);
+        
         this.formation = formation
         this.formationsService.getDataBreadcrumb({label: formation.nom, item: 'formation'});
-
       }
     })
     if(sessionStorage.getItem('details-formation')){

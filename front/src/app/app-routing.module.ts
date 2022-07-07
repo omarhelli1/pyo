@@ -6,27 +6,29 @@ import { DetailsFormationComponent } from './pages/formations-page/details-forma
 import { FormationsPageComponent } from './pages/formations-page/formations-page.component';
 import { HomeFormationsComponent } from './pages/formations-page/home-formations/home-formations.component';
 import { FormulaireInscriptionClientComponent } from './pages/formulaire-inscription-client/formulaire-inscription-client.component';
-import { InscriptionClientComponent } from './pages/inscription-client/inscription-client.component';
+import { SidenavComponent } from './pages/formations-page/sidenav/sidenav.component';
+
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
   { path: 'home', component: HomePageComponent },
-  { path: 'inscription-client', component: InscriptionClientComponent},
+  { path: 'inscription-client', component: FormulaireInscriptionClientComponent},
   {
-    path: 'liste-des-formations',
+    path: 'catalogue',
     component: FormationsPageComponent,
     children: [
       { path: '', component: HomeFormationsComponent },
 
       {
-        path: ':domaine/:domaine_id/:theme/:theme_id',
-        component: ListeFormationsComponent,
-      },
-      {
-        path: ':domaine/:domaine_id/:theme/:id/:formation/:formation_id',
-        component: DetailsFormationComponent,
+        path: 'liste-des-formations',
+        component: SidenavComponent,
         children: [
-          { path: 'inscription-client', component: FormulaireInscriptionClientComponent },
-
+          { path: ':domaine/:domaine_id/:theme/:theme_id', component: ListeFormationsComponent},
+          { path: ':domaine/:domaine_id/:theme/:id/:formation/:formation_id', component: DetailsFormationComponent },
+          { path: ':domaine/:domaine_id/:theme/:id/:formation/:formation_id/inscription-client', component: DetailsFormationComponent,
+            children: [
+              { path: '', component: FormulaireInscriptionClientComponent}
+            ] 
+          }
         ]
       },
      

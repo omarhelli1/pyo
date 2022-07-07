@@ -14,7 +14,7 @@
                 </p>
                  <div>
                     <ul>
-                        <li *ngFor="let sousTheme of theme.themes"  [routerLink]="['/liste-des-formations',data.nom.replace(regexUri, '-'), data.id, theme.nom.replace(regexUri, '-'), theme.id]">{{sousTheme.nom}} 
+                        <li *ngFor="let sousTheme of theme.themes"  [routerLink]="['/catalogue', 'liste-des-formations',data.nom.replace(regexUri, '-'), data.id, theme.nom.replace(regexUri, '-'), theme.id]">{{sousTheme.nom}} 
                             <mat-icon class="eye-icon">visibility</mat-icon>
                         </li>
                      </ul>
