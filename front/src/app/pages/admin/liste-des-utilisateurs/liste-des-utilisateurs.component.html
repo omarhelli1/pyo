@@ -1,0 +1,22 @@
+<table *ngIf="utilisateurs">
+    <thead>
+        <tr>
+            <th>Théme</th>
+            <th>Libellé</th>
+            <!-- <th>Description</th> -->
+            <th [ngStyle]="{'text-align': 'center'}">Actions</th>
+        </tr>
+    </thead>
+    <tbody *ngIf="utilisateurs">
+        <tr *ngFor="let utilisateur of utilisateurs; let i = index">
+            <td>{{utilisateur.nom | slice:0:50}} ...</td>
+            <td class="td-nom-formation">{{utilisateur.prenom}}</td>
+            <!-- <td>{{txt}}</td> -->
+            <td class="td-actions">
+                <!-- <mat-icon (click)="showDetailsFormation(formation)">preview</mat-icon>
+                <mat-icon (click)="login(formation)">login</mat-icon> -->
+                {{utilisateur.prenom}}
+            </td>
+        </tr>
+    </tbody>
+</table>
