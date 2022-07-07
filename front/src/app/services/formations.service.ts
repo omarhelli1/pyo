@@ -54,6 +54,8 @@ export class FormationsService  {
    }
 
    detailsFormation(formation: any){
+    console.log(formation);
+    
     this.formationSource.next(formation)
    }
 
