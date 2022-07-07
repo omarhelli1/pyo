@@ -1,6 +1,9 @@
 package filrougePYO.back.entity;
 
 import javax.persistence.*;
+
+import org.springframework.format.annotation.DateTimeFormat;
+
 import java.util.Date;
 import java.util.List;
 
@@ -14,9 +17,14 @@ public class Utilisateur {
     private String nom;
     @Column(name="prenom")
     private String prenom;
-    @Column(name="dataNaissance")
-    private Date dataNaissance;
-    @ManyToOne
+    @Column(name="birth_day")
+    @DateTimeFormat(pattern="yyyy/dd/MM")
+    private String birthDay;
+    @Column(name="mail")
+    private String mail;
+    
+
+	@ManyToOne
     @JoinColumn(name="service_id")
     private Service service;
     @ManyToOne
@@ -25,6 +33,7 @@ public class Utilisateur {
     @ManyToOne
     @JoinColumn(name="role_id")
     private Role role;
+
     @ManyToMany
     @JoinTable(
             name = "utilisateur_session",
@@ -37,35 +46,44 @@ public class Utilisateur {
 	}
 	
 	
-	public Utilisateur(Long id, String nom, String prenom, Date dataNaissance, Entreprise entreprise, Role role) {
+	public Utilisateur(Long id, String nom, String prenom, String birthDay, Entreprise entreprise, Role role, String mail) {
 		super();
 		this.setId(id);
 		this.setNom(nom);
 		this.setPrenom(prenom);
-		this.setDataNaissance(dataNaissance);
+		this.setBirthDay(birthDay);
 		this.setEntreprise(entreprise);
 		this.setRole(role);
 	}
 
 	
 
-	public Utilisateur(Long id, String nom, String prenom, Date dataNaissance, Service service, Role role) {
+	public Utilisateur(Long id, String nom, String prenom, String birthDay, Service service, Role role,  String mail) {
 		super();
 		this.setId(id);
 		this.setNom(nom);
 		this.setPrenom(prenom);
-		this.setDataNaissance(dataNaissance);
+		this.setBirthDay(birthDay);
 		this.setService(service);
 		this.setRole(role);
 	}
 
 
-	public Utilisateur(Long id, String nom, String prenom, Date dataNaissance) {
+	public Utilisateur(Long id, String nom, String prenom, String birthDay,  String mail) {
 		super();
 		this.setId(id);
 		this.setNom(nom);
 		this.setPrenom(prenom);
-		this.setDataNaissance(dataNaissance);
+		this.setBirthDay(birthDay);
+	}
+	
+	public String getMail() {
+		return mail;
+	}
+
+
+	public void setMail(String mail) {
+		this.mail = mail;
 	}
 
 	public Long getId() {
@@ -92,13 +110,19 @@ public class Utilisateur {
 		this.prenom = prenom;
 	}
 
-	public Date getDataNaissance() {
-		return dataNaissance;
+
+
+
+
+	public String getBirthDay() {
+		return birthDay;
 	}
 
-	public void setDataNaissance(Date dataNaissance) {
-		this.dataNaissance = dataNaissance;
+
+	public void setBirthDay(String birthDay) {
+		this.birthDay = birthDay;
 	}
+
 
 	public Service getService() {
 		return service;
