@@ -36,26 +36,17 @@ export class FormationsService  {
               
       }
     })
-
-    
    }
 
    getDataBreadcrumb(label: any){
-    
     this.breadcrumbSource.next(label)
    }
 
    changeTheme(theme: any){
-    
-    
     this.themeSource.next(theme)
-    // console.log(this.route.url._value);
-
    }
 
-   detailsFormation(formation: any){
-    console.log(formation);
-    
+   detailsFormation(formation: any){    
     this.formationSource.next(formation)
    }
 
