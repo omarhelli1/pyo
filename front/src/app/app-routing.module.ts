@@ -16,6 +16,13 @@ import { ListeDesUtilisateursComponent } from './pages/admin/liste-des-utilisate
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
   { path: 'home', component: HomePageComponent },
+  { path: 'admin', component: AdminPageComponent, 
+    children: [
+      { path: 'liste-des-sessions', component: ListeDesSessionsComponent },
+      { path: 'liste-des-utilisateur', component: ListeDesUtilisateursComponent },
+    ] 
+  },
+
 
 { path: 'recherche', component: RechercheComponent },
 { path: 'formCreerFormation', component: FormCreateFormationComponent },
