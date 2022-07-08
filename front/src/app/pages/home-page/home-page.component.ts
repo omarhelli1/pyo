@@ -18,10 +18,8 @@ export class HomePageComponent implements OnInit {
       (formation: any) => {
         if (formation) {
           this.formations = formation;
-          console.log(this.formations);
           for (let index = 0; index < this.formations.length; index++) {
             const element = this.formations[index];
-            console.log(element);
           }
         }
       }

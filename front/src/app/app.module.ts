@@ -23,6 +23,9 @@ import { HomePageComponent } from './pages/home-page/home-page.component';
 import { FormulaireInscriptionClientComponent } from './pages/formulaire-inscription-client/formulaire-inscription-client.component';
 import { DomainesUlComponent } from './pages/formations-page/domaines-ul/domaines-ul.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { ListeDesUtilisateursComponent } from './pages/admin/liste-des-utilisateurs/liste-des-utilisateurs.component';
+import { ListeDesSessionsComponent } from './pages/admin/liste-des-sessions/liste-des-sessions.component';
+import { AdminPageComponent } from './pages/admin/admin-page/admin-page.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -37,7 +40,10 @@ import { ReactiveFormsModule } from '@angular/forms';
     HomeFormationsComponent,
     CardSessionComponent,
     FormulaireInscriptionClientComponent,
-    DomainesUlComponent
+    DomainesUlComponent,
+    ListeDesUtilisateursComponent,
+    ListeDesSessionsComponent,
+    AdminPageComponent
   ],
   imports: [
     BrowserModule,
