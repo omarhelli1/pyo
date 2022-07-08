@@ -27,13 +27,11 @@ public class Utilisateur {
 	@ManyToOne
     @JoinColumn(name="service_id")
     private Service service;
-    @ManyToOne
+    @ManyToOne(targetEntity = Entreprise.class)
     @JoinColumn(name="entreprise_id")
     private Entreprise entreprise;
-    @ManyToOne
-    @JoinColumn(name="role_id")
-    private Role role;
-
+    
+    private Long role_id;
     @ManyToMany
     @JoinTable(
             name = "utilisateur_session",
@@ -46,26 +44,27 @@ public class Utilisateur {
 	}
 	
 	
-	public Utilisateur(Long id, String nom, String prenom, String birthDay, Entreprise entreprise, Role role, String mail) {
+	public Utilisateur(Long id, String nom, String prenom, String birthDay, Entreprise entreprise, Long role_id, String mail) {
 		super();
 		this.setId(id);
 		this.setNom(nom);
 		this.setPrenom(prenom);
 		this.setBirthDay(birthDay);
 		this.setEntreprise(entreprise);
-		this.setRole(role);
+		this.setRole_id(role_id);
+		
 	}
 
 	
 
-	public Utilisateur(Long id, String nom, String prenom, String birthDay, Service service, Role role,  String mail) {
+	public Utilisateur(Long id, String nom, String prenom, String birthDay, Service service, Long role_id,  String mail) {
 		super();
 		this.setId(id);
 		this.setNom(nom);
 		this.setPrenom(prenom);
 		this.setBirthDay(birthDay);
 		this.setService(service);
-		this.setRole(role);
+		this.setRole_id(role_id);
 	}
 
 
@@ -140,15 +139,19 @@ public class Utilisateur {
 		this.entreprise = entreprise;
 	}
 
-	public Role getRole() {
-		return role;
+
+	public Long getRole_id() {
+		return role_id;
 	}
 
-	public void setRole(Role role) {
-		this.role = role;
-	}
-	
-	
 
+	public void setRole_id(Long role_id) {
+		this.role_id = role_id;
+	}
+
+
+	public String toString() {
+		return this.getNom() + "/" + this.getPrenom() + "/" + this.getRole_id()+ "/"  + this.getEntreprise().getNom() + this.getEntreprise().getId();
+	}
 	
 }

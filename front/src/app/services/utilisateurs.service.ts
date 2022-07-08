@@ -26,7 +26,7 @@ export class UtilisateurService  {
 
     public inscriptionUtilisateur(user: UtilisateurModel){
         user.entreprise = { 
-            nom:'entreprise 1'
+            nom:'entreprise 101'
         }
         this.httpClient.post('http://localhost:8080/utilisateurs/ajout', user).subscribe()
     }
