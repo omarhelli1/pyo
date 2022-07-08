@@ -6,6 +6,9 @@ import { DetailsFormationComponent } from './pages/formations-page/details-forma
 import { FormationsPageComponent } from './pages/formations-page/formations-page.component';
 import { HomeFormationsComponent } from './pages/formations-page/home-formations/home-formations.component';
 import { FormulaireInscriptionClientComponent } from './pages/formulaire-inscription-client/formulaire-inscription-client.component';
+import { RechercheComponent } from './pages/moteurRecherche/recherche/recherche.component';
+import { FormCreateFormationComponent } from './pages/formulaire-create-formation/form-create-formation/form-create-formation.component';
+
 import { SidenavComponent } from './pages/formations-page/sidenav/sidenav.component';
 import { AdminPageComponent } from './pages/admin/admin-page/admin-page.component';
 import { ListeDesSessionsComponent } from './pages/admin/liste-des-sessions/liste-des-sessions.component';
@@ -13,6 +16,9 @@ import { ListeDesUtilisateursComponent } from './pages/admin/liste-des-utilisate
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
   { path: 'home', component: HomePageComponent },
+
+{ path: 'recherche', component: RechercheComponent },
+{ path: 'formCreerFormation', component: FormCreateFormationComponent },
   { path: 'inscription-client', component: FormulaireInscriptionClientComponent},
   { path: 'admin', component: AdminPageComponent,
     children: [
@@ -36,11 +42,11 @@ const routes: Routes = [
           { path: ':domaine/:domaine_id/:theme/:id/:formation/:formation_id/inscription-client', component: DetailsFormationComponent,
             children: [
               { path: '', component: FormulaireInscriptionClientComponent}
-            ] 
+            ]
           }
         ]
       },
-     
+
     ],
   },
 ];
