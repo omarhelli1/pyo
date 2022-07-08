@@ -4,10 +4,10 @@ export default interface UtilisateurModel{
   id?: number;
   nom: string;
   prenom: string;
-  date_naissance: Date;
+  birthDay: string;
   entreprise: Entreprise;
   role: string;
   mail: String;
-  service_id: number;
-  adresse_id: number;
+  service: number;
+  adresse: number;
 };

@@ -8,7 +8,6 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
   styleUrls: ['./card-profil.component.scss']
 })
 export class CardProfilComponent implements OnInit {
-
  
   user: any = {
     id: 1,
@@ -33,10 +32,6 @@ export class CardProfilComponent implements OnInit {
       bs: "harness real-time e-markets"
     }
   }
-
-
-
-
 
 
   userForm: FormGroup = this.formBuilder.group({
@@ -75,7 +70,7 @@ export class CardProfilComponent implements OnInit {
     if (this.userForm.valid) {
       this.addUser();
     } else {
-      console.log("Le formulaire yé pété")
+      console.log("Le formulaire non valide")
     }
   }
 

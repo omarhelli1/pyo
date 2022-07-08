@@ -21,7 +21,7 @@
 
 LOCK TABLES `domaine` WRITE;
 /*!40000 ALTER TABLE `domaine` DISABLE KEYS */;
-INSERT INTO `domaine` VALUES (1,'Business Intelligence'),(2,'Management de projet'),(3,'Language informatique'),(4,'Administration réseaux');
+INSERT INTO `domaine` VALUES (2,'Domaine 2'),(3,'Domaine 3');
 /*!40000 ALTER TABLE `domaine` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -31,6 +31,7 @@ UNLOCK TABLES;
 
 LOCK TABLES `entreprise` WRITE;
 /*!40000 ALTER TABLE `entreprise` DISABLE KEYS */;
+INSERT INTO `entreprise` VALUES (1,'entreprise 1'),(4,'entreprise 1');
 /*!40000 ALTER TABLE `entreprise` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -60,7 +61,7 @@ UNLOCK TABLES;
 
 LOCK TABLES `hibernate_sequence` WRITE;
 /*!40000 ALTER TABLE `hibernate_sequence` DISABLE KEYS */;
-INSERT INTO `hibernate_sequence` VALUES (1);
+INSERT INTO `hibernate_sequence` VALUES (7);
 /*!40000 ALTER TABLE `hibernate_sequence` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -70,6 +71,7 @@ UNLOCK TABLES;
 
 LOCK TABLES `role` WRITE;
 /*!40000 ALTER TABLE `role` DISABLE KEYS */;
+INSERT INTO `role` VALUES (2,NULL),(5,NULL);
 /*!40000 ALTER TABLE `role` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -137,4 +139,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2022-07-01 15:57:27
+-- Dump completed on 2022-07-08  9:54:25

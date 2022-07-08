@@ -1,0 +1,193 @@
+<form class="needs-validation" novalidate="">
+  <div class="row">
+    <div class="col-md-6 mb-3">
+      <label for="utilisateurs">Formateur : </label>
+      <input
+        type="text"
+        class="form-control"
+        id="utilisateurs"
+        placeholder="Nom du formateur"
+        value=""
+        required=""
+      />
+      <input
+        type="text"
+        class="form-control"
+        id="service_id"
+        placeholder="Prénom du formateur"
+        value=""
+        required=""
+      />
+      <div class="invalid-feedback">Valid nom is required.</div>
+    </div>
+    <label for="domaines">Domaine</label>
+    <input
+      type="text"
+      class="form-control"
+      id="nom"
+      placeholder="Nom de domaine"
+      value=""
+      required=""
+    />
+    <div class="invalid-feedback">Valid nom is required.</div>
+  </div>
+  <div class="col-md-6 mb-3">
+    <label for="thème">Thème</label>
+    <input
+      type="text"
+      class="form-control"
+      id="nom"
+      placeholder="Theme de la formation"
+      value=""
+      required=""
+    />
+    <div class="invalid-feedback">Valid theme is required.</div>
+    <label for="formation">Formation</label>
+    <input
+      type="text"
+      class="form-control"
+      id="nom"
+      placeholder="Nom de la formation"
+      value=""
+      required=""
+    />
+    <div class="invalid-feedback">Valid nom is required.</div>
+    <input
+      type="textarea"
+      class="form-control"
+      id="description"
+      placeholder="decrire la formation"
+      value=""
+      required=""
+    />
+    <div class="invalid-feedback">Valid description is required.</div>
+    <label for="session">Session</label>
+    <input
+      type="number"
+      style="visibility: hidden"
+      class="form-control"
+      id="formation_id"
+      placeholder="Nom-de-session ou numero"
+      value=""
+      required=""
+    />
+
+    <input
+      type="Date"
+      class="form-control"
+      id="date"
+      placeholder="date-de-formation"
+      value=""
+      required=""
+    />
+    <div class="invalid-feedback">Valid date is required.</div>
+
+    <label for="prix ">Prix</label>
+    <input
+      type="float"
+      class="form-control"
+      id="prix"
+      placeholder="prix-de-formation"
+      value=""
+      required=""
+    /><span>€</span>
+    <div class="invalid-feedback">Valid prix is required.</div>
+
+    <div class="col-md-4 mb-3">
+      <label for="type">Type</label>
+      <select class="custom-select d-block w-100" id="state" required="">
+        <option value="">Choose...</option>
+        <option>Intra Muros</option>
+        <option>En Entreprise</option>
+      </select>
+      <div class="invalid-feedback">Please provide a valid type.</div>
+    </div>
+
+    <label for="session">Adresse</label>
+    <label for="session">Rue :</label
+    ><input
+      type="text"
+      class="form-control"
+      id="rue"
+      placeholder="rue"
+      value=""
+      required=""
+    />
+    <div class="invalid-feedback">Valid rue is required.</div>
+    <label for="session">Numéro :</label
+    ><input
+      type="number"
+      class="form-control"
+      id="numero"
+      placeholder="numero"
+      value=""
+      required=""
+    />
+    <div class="invalid-feedback">Valid numero is required.</div>
+    <label for="session">Ville :</label
+    ><input
+      type="text"
+      class="form-control"
+      id="ville"
+      placeholder="ville"
+      value=""
+      required=""
+    />
+    <div class="invalid-feedback">Valid ville is required.</div>
+    <label for="session">Code Postal :</label
+    ><input
+      type="number"
+      class="form-control"
+      id="codePostal"
+      placeholder="code-postal"
+      value=""
+      required=""
+    />
+    <div class="invalid-feedback">Valid numero is required.</div>
+  </div>
+
+  <div class="mb-3">
+    <label for="email">Email </label>
+    <input
+      type="email"
+      class="form-control"
+      id="email"
+      placeholder="you@example.com"
+    />
+    <div class="invalid-feedback">Please enter a valid email address</div>
+
+    <label class="custom-control-label" for="test">TEST</label>
+    <br />
+    <div
+      class="cadre-test"
+      style="
+        width: 25%;
+        height: 20%;
+        background-color: aquamarine;
+        padding-top: 20px;
+        padding-bottom: 20px;
+      "
+    >
+      <input type="checkbox" name="test" value="SQL" />CULTURE GENERALE
+      INFORMATIQUE<br />
+      <input type="checkbox" name="test" value="SQL" />TEST TECHNIQUE<br />
+      <input type="checkbox" name="test" value="SQL" />ORTOGRAPHE<br />
+      <input type="checkbox" name="test" value="logique" />LOGIQUE<br />
+      <input type="checkbox" name="test" value="algo" />ALGORYTHME<br />
+      <input type="checkbox" name="test" value="reseau" />RESEAU<br />
+      <input type="checkbox" name="test" value="projet" />SOFTS SKILLS<br />
+    </div>
+
+    <h4 class="mb-3">
+      En attente de Validation de la formation par le Responsable
+    </h4>
+    <span style="visibility: hidden"
+      >Validation de la formation par le Responsable ce "date"</span
+    >
+
+    <hr class="mb-4" />
+    <button class="btn btn-primary btn-lg btn-block" type="submit">
+      ENREGISTRER LA FORMATION
+    </button>
+  </div>
+</form>

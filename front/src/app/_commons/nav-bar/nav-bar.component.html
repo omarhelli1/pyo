@@ -2,15 +2,32 @@
   integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous" />
 <nav class="navbar">
 
-  <div class="container-fluid">
-    <img class="Pyo_logo" src="/assets/images/Pyo_logo.png" alt="PYO Information">
+
+
+
+
+
+
+    <button class="button" routerLink="/home"> <img
+      class="pyo_logo"
+      src="/assets/images/Pyo_logo.png"
+      alt="PYO Information"
+    /></button>
     <div class="button">
-      <button class="tablink" routerLink="/catalogue">Catalogue</button>
-      <button class="tablink" onclick="open('Calendrier', this, 'Calendrier')">Calendrier</button>
-      <button class="tablink" onclick="open('Contact', this, 'Contact')">Contact</button>
-      <button class="tablink" onclick="open('Recherche', this, 'Recherche')">Recherche</button>
-      <button class="tablink" onclick="open('Connexion', this, 'Connexion')">Connexion</button>
+      <button class="tablink" routerLink="/catalogue">
+        Catalogue
+      </button>
+      <button class="tablink" onclick="open('Calendrier', this, 'Calendrier')">
+        Calendrier
+      </button>
+      <button class="tablink" onclick="open('Contact', this, 'Contact')">
+        Contact
+      </button>
+      <button class="tablink" routerLink="/recherche">
+        Recherche
+      </button>
+      <button class="tablink" routerLink="/inscription-client" >Connexion</button>
+
     </div>
-  </div>
-  
+
 </nav>
