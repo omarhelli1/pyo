@@ -14,10 +14,12 @@
    
 }
 
-.Pyo_logo {
+.pyo_logo {
     width: 135px;
     height: 45px;
-    margin-top: 5px;
+    border: none!important;
+    padding: 0!important;;
+
   }
 
   .navbar{
@@ -34,4 +36,11 @@
 .nav{
     height: 80px;
     width: 100%;
+}
+
+.button{
+    border: none;
+    padding: 0;
+    margin-top: 20px;
+    margin-left: 20px;
 }

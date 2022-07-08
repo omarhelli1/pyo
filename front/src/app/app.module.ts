@@ -26,6 +26,9 @@ import { RechercheComponent } from './pages/moteurRecherche/recherche/recherche.
 import { FormCreateFormationComponent } from './pages/formulaire-create-formation/form-create-formation/form-create-formation.component';
 
 import { ReactiveFormsModule } from '@angular/forms';
+import { ListeDesUtilisateursComponent } from './pages/admin/liste-des-utilisateurs/liste-des-utilisateurs.component';
+import { ListeDesSessionsComponent } from './pages/admin/liste-des-sessions/liste-des-sessions.component';
+import { AdminPageComponent } from './pages/admin/admin-page/admin-page.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -41,6 +44,9 @@ import { ReactiveFormsModule } from '@angular/forms';
     CardSessionComponent,
     FormulaireInscriptionClientComponent,
     DomainesUlComponent,
+    ListeDesUtilisateursComponent,
+    ListeDesSessionsComponent,
+    AdminPageComponent,
     RechercheComponent,
     FormCreateFormationComponent,
     DomainesUlComponent

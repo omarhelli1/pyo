@@ -10,7 +10,9 @@ import { RechercheComponent } from './pages/moteurRecherche/recherche/recherche.
 import { FormCreateFormationComponent } from './pages/formulaire-create-formation/form-create-formation/form-create-formation.component';
 
 import { SidenavComponent } from './pages/formations-page/sidenav/sidenav.component';
-
+import { AdminPageComponent } from './pages/admin/admin-page/admin-page.component';
+import { ListeDesSessionsComponent } from './pages/admin/liste-des-sessions/liste-des-sessions.component';
+import { ListeDesUtilisateursComponent } from './pages/admin/liste-des-utilisateurs/liste-des-utilisateurs.component';
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
   { path: 'home', component: HomePageComponent },
@@ -18,6 +20,13 @@ const routes: Routes = [
 { path: 'recherche', component: RechercheComponent },
 { path: 'formCreerFormation', component: FormCreateFormationComponent },
   { path: 'inscription-client', component: FormulaireInscriptionClientComponent},
+  { path: 'admin', component: AdminPageComponent,
+    children: [
+      { path: 'liste-des-sessions', component: ListeDesSessionsComponent},
+      { path: 'liste-des-utilisateurs', component: ListeDesUtilisateursComponent},
+    ]
+  },
+
   {
     path: 'catalogue',
     component: FormationsPageComponent,
