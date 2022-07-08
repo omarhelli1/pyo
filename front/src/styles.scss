@@ -84,12 +84,25 @@ app-home-page, app-admin-page{
 app-admin-page{
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
     app-liste-des-utilisateurs{
+        margin-top: 80px;
         width: 85%;
         height: 100%;
     }
+    app-liste-des-sessions{
+        margin-top: 80px;
+        width: 85%;
+        height: 100%;
+    }
+}
+
+app-admin-cards{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex: 1;
+    align-items: center;
 }
 
 

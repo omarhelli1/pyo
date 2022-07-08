@@ -1,7 +1,18 @@
 @import '../../../../assets/variables.scss';
 
+h1{
+    font-size: 30px;
+    color: $color-dark;
+    text-decoration: underline;
+    text-decoration-color: $color-site;
+    position: relative;
+    left: -15px;
+    
+}
+
 table{
-   width: 100%;
+    margin-top: 30px;
+    width: 100%;
     td{
         padding-right: 10px;
         padding-left: 10px;
