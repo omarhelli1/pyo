@@ -31,6 +31,7 @@ import { ListeDesUtilisateursComponent } from './pages/admin/liste-des-utilisate
 import { ListeDesSessionsComponent } from './pages/admin/liste-des-sessions/liste-des-sessions.component';
 import { AdminPageComponent } from './pages/admin/admin-page/admin-page.component';
 import { AdminCardsComponent } from './pages/admin/admin-cards/admin-cards.component';
+import { FormationCardComponent } from './pages/formations-page/formation-card/formation-card.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -53,7 +54,8 @@ import { AdminCardsComponent } from './pages/admin/admin-cards/admin-cards.compo
     RechercheComponent,
     FormCreateFormationComponent,
     DomainesUlComponent,
-    AdminCardsComponent
+    AdminCardsComponent,
+    FormationCardComponent
   ],
 
   imports: [

@@ -30,8 +30,12 @@ app-liste-formations{
     height: 100%;
     display: flex;
     flex-direction: column;
-    table{
+    align-items: center;
+    app-formation-card{
         width: 100%;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
     }
 }
 
