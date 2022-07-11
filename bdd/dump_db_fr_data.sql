@@ -21,7 +21,7 @@
 
 LOCK TABLES `domaine` WRITE;
 /*!40000 ALTER TABLE `domaine` DISABLE KEYS */;
-INSERT INTO `domaine` VALUES (1,'Business Intelligence'),(2,'Management de projet'),(3,'Language informatique'),(4,'Administration réseaux');
+INSERT INTO `domaine` VALUES (1,'Domaine Informatique 1'), (2, 'Management'), (3, 'Reseaux'), (4, 'Business Intelligence');
 /*!40000 ALTER TABLE `domaine` ENABLE KEYS */;
 UNLOCK TABLES;
 

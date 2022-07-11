@@ -1,0 +1,28 @@
+package filrougePYO.back.controller;
+
+
+import filrougePYO.back.entity.Session;
+import filrougePYO.back.services.SessionService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
+
+@RestController
+@CrossOrigin
+@RequestMapping("/sessions")
+public class SessionController {
+
+    @Autowired
+     private SessionService sessionService;
+
+
+    @GetMapping("")
+    @ResponseStatus(code= HttpStatus.OK)
+    public List<Session> findAll(){
+       return this.sessionService.findAll();
+    }
+
+
+}
