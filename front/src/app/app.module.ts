@@ -30,6 +30,8 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { ListeDesUtilisateursComponent } from './pages/admin/liste-des-utilisateurs/liste-des-utilisateurs.component';
 import { ListeDesSessionsComponent } from './pages/admin/liste-des-sessions/liste-des-sessions.component';
 import { AdminPageComponent } from './pages/admin/admin-page/admin-page.component';
+import { AdminCardsComponent } from './pages/admin/admin-cards/admin-cards.component';
+import { FormationCardComponent } from './pages/formations-page/formation-card/formation-card.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -51,7 +53,9 @@ import { AdminPageComponent } from './pages/admin/admin-page/admin-page.componen
     AdminPageComponent,
     RechercheComponent,
     FormCreateFormationComponent,
-    DomainesUlComponent
+    DomainesUlComponent,
+    AdminCardsComponent,
+    FormationCardComponent
   ],
 
   imports: [
