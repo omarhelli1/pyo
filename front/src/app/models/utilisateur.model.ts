@@ -1,11 +1,13 @@
+import Entreprise from "./entreprise.model";
 export default interface UtilisateurModel{
 
-  id: number;
+  id?: number;
   nom: string;
   prenom: string;
-  date_naissance: Date;
-  entreprise: string;
+  birthDay: string;
+  entreprise: Entreprise;
   role: string;
-  service_id: number;
-  adresse_id: number;
+  mail: String;
+  service: number;
+  adresse: number;
 };

@@ -8,13 +8,13 @@
         </tr>
     </thead>
     <tbody *ngIf="theme">
-        <tr *ngFor="let formation of theme.formations; let i = index">
+        <tr *ngFor="let formation of theme.formation; let i = index">
             <td>{{theme.nom | slice:0:50}} ...</td>
             <td class="td-nom-formation">{{formation.nom}}</td>
             <!-- <td>{{txt}}</td> -->
             <td class="td-actions">
                 <mat-icon (click)="showDetailsFormation(formation)">preview</mat-icon>
-                <mat-icon>login</mat-icon>
+                <mat-icon (click)="login(formation)">login</mat-icon>
             </td>
         </tr>
     </tbody>

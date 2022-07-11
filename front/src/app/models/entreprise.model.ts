@@ -1,8 +1,8 @@
-import UtilisateurModel from "./utilisateur.model";
+import Adresse from "./adresse.model";
 
 
-export default interface Entreprise extends UtilisateurModel {
-  id : number;
+export default interface Entreprise {
+  // id:number;
   nom: string;
-  adresse_id: number;
+  // adresse_id: Adresse;
 }

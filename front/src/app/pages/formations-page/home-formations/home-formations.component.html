@@ -1,3 +1,21 @@
+<div class="text-home-formation">
+    <div class="container-p">
+        <p>La société PYO vous fourni à travers son portail web un accès à son catalogue, riche de plus 800 formations. Celles-ci couvrent plusieurs domaines.</p><br>
+        <p>Les formations sont regroupées par thèmes.</p><br>
+        <p>En cliquant sur un théme vous pouvez accéder à une liste de formations liées au théme choisi.</p><br>
+        <p>Concernant les informations sur le contenu de la formation ainsi qu’aux informations sur le prix, la dates et le lieux des prochaines sessions planifiées, il faudra alors choisir une formation dans la liste des formations que nous vous proposons.</p><br>
+        <p>Avant de participer à une formation un lien vous sera envoyer afin de tester vos connaissances en ligne.</p>
+    </div>
+    <div class="contianer-domaines-ul">
+        <app-domaines-ul   *ngFor="let item of domaines" [data]="item" class="domaine-component"></app-domaines-ul>
+        <app-domaines-ul   *ngFor="let item of domaines" [data]="item" class="domaine-component"></app-domaines-ul>
+    </div>
+    <div class="last-p">
+        <p>Vous pouvez également demander une formation personnalisée selon vos besoins et vos objectifs. Pour plus d’information sur ce point n’hésitez pas à contacter le <span [ngStyle]="{'font-weight': 'bold'}">Responsable d’enregistrement des formations</span></p>
+    </div>
+</div>
+
+<!--
 <p>
     Le catalogue de formation : Le client souhaite fournir à travers son portail web un accès
 à son catalogue, riche de plus 800 formations. Celles-ci couvrent plusieurs domaines, i.e.,
@@ -21,4 +39,4 @@ sur le site ainsi que les données qu’il faudra surlignées et mettre en évid
 Un lien devra bien sûr être fourni au client afin de lui permettre de contacter directement
 le service commercial ou bien de s’enregistrer directement en ligne pour suivre une session
 donnée. Le point suivant détail cet aspect-là du SI.
-</p>
+</p> -->
