@@ -13,11 +13,13 @@ import { SidenavComponent } from './pages/formations-page/sidenav/sidenav.compon
 import { AdminPageComponent } from './pages/admin/admin-page/admin-page.component';
 import { ListeDesSessionsComponent } from './pages/admin/liste-des-sessions/liste-des-sessions.component';
 import { ListeDesUtilisateursComponent } from './pages/admin/liste-des-utilisateurs/liste-des-utilisateurs.component';
+import { AdminCardsComponent } from './pages/admin/admin-cards/admin-cards.component';
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
   { path: 'home', component: HomePageComponent },
   { path: 'admin', component: AdminPageComponent, 
     children: [
+      { path: '', component: AdminCardsComponent },
       { path: 'liste-des-sessions', component: ListeDesSessionsComponent },
       { path: 'liste-des-utilisateur', component: ListeDesUtilisateursComponent },
     ] 
