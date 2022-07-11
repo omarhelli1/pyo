@@ -28,6 +28,9 @@ public class Formation {
             joinColumns = @JoinColumn(name="formation_id"),
             inverseJoinColumns = @JoinColumn(name = "theme_id"))	
 	private List<Theme> theme;
+
+
+
 	public Formation() {
 		super();
 		// TODO Auto-generated constructor stub
