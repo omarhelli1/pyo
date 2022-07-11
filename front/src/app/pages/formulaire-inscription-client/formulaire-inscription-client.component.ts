@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { UtilisateurService } from 'src/app/services/utilisateurs.service';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms'
 import UtilisateurModel from 'src/app/models/utilisateur.model';
+import { Router, ActivatedRoute } from '@angular/router';
+
 @Component({
   selector: 'app-formulaire-inscription-client',
   templateUrl: './formulaire-inscription-client.component.html',
@@ -9,7 +11,7 @@ import UtilisateurModel from 'src/app/models/utilisateur.model';
 })
 export class FormulaireInscriptionClientComponent implements OnInit {
 
-  constructor(private utilisateurService: UtilisateurService, private fb: FormBuilder) { }
+  constructor(private utilisateurService: UtilisateurService, private fb: FormBuilder, private activatedRoute: ActivatedRoute){ }
   userForm!: FormGroup;
   user!: UtilisateurModel
   ngOnInit(): void {
@@ -25,7 +27,7 @@ export class FormulaireInscriptionClientComponent implements OnInit {
   }
 
   public submitForm(){
-    
+    // this.activatedRoute.snapshot.params.get
     this.user = this.userForm.value;
     this.utilisateurService.inscriptionUtilisateur(this.user, )
   }

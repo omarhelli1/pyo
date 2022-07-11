@@ -41,15 +41,22 @@ public class UtilisateurController {
 	@ResponseStatus(code = HttpStatus.CREATED)
 	public void addUser(@RequestBody Utilisateur utilisateur) {
 		System.out.println(utilisateur.getNom());
-		this.role.setId((long) 1);
-		this.role.setNom("client");
-		utilisateur.setRole(this.role);
+		
+		
+		utilisateur.setRole_id((long) 3);
+		System.out.println(this.role.toString());
+
+		System.out.println(utilisateur.toString());
 //		Role role = new Role()
 //		this.role.setId(1);
-		this.entrepriseService.create(utilisateur.getEntreprise());
-		this.roleDao.save(new Role());
+		
+		entrepriseService.create(utilisateur.getEntreprise());
+//		utilisateur.setEntreprise(null);
+		//System.out.println(entreprise);
+//		this.roleDao.save(new Role());
 //		utilisateur.setBirthDay(new Date(utilisateur.getBirthDay()));
 //		System.out.println(utilisateur.g);
+		System.out.println(this.role.getId());
 		this.utilisateurService.addUser(utilisateur);
 	}
 }

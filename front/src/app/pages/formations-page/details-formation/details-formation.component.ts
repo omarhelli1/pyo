@@ -14,12 +14,9 @@ export class DetailsFormationComponent implements OnInit {
   formation: any
   getElemRoute?: string;
   ngOnInit(): void {
-    console.log(this.route.snapshot.routeConfig?.children);
     this.getElemRoute = this.router.url.split('/')[this.router.url.split('/').length - 1];
     this.subscription = this.formationsService.currentFormation.subscribe((formation: any) => {
       if(formation){
-        console.log(formation);
-        
         this.formation = formation
         this.formationsService.getDataBreadcrumb({label: formation.nom, item: 'formation'});
       }

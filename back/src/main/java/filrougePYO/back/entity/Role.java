@@ -43,5 +43,7 @@ public class Role {
 	}
 	
 	
-
+	public  String toString(){
+		return this.getNom() + "/" + this.getId();
+	}
 }

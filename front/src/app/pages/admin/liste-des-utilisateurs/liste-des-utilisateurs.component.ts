@@ -18,7 +18,10 @@ export class ListeDesUtilisateursComponent implements OnInit {
     this.subscription = this.utilisateurService.currentUtilisateur.subscribe((utilisateurs: any) => {
       
       if(utilisateurs != null){
-        this.utilisateurs = utilisateurs        
+        this.utilisateurs = utilisateurs     
+        
+        console.log(this.utilisateurs);
+        
       }
     })
     
