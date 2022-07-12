@@ -15,6 +15,8 @@ import javax.persistence.Table;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
+import filrougePYO.back.dto.ThemeAvecSousThemes;
+
 @Entity
 @Table
 public class Theme {
@@ -29,20 +31,24 @@ public class Theme {
 	@JoinColumn(name="domaine_id")
 	@JsonIgnore
 	private Domaine domaine;
-	
 	@ManyToMany
 	@JoinTable(
             name = "formation_theme",
             joinColumns = @JoinColumn(name="theme_id"),
             inverseJoinColumns = @JoinColumn(name = "formation_id"))	
 	private List<Formation> formation = new ArrayList<>();
+	
 	public Theme() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
-	
+
+	public Theme(Theme theme) {
+		// TODO Auto-generated constructor stub
+	}
+
 	public Theme(Long id, String nom, Long parent_id, Domaine domaine, Formation formation) {
-		super();
+		
 		this.setId(id);
 		this.setNom(nom);
 		this.setParent_id(parent_id);

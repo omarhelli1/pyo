@@ -1,7 +1,7 @@
 import { Component, ElementRef, OnInit, QueryList, Renderer2, ViewChild, ViewChildren } from '@angular/core';
 import { Subscription } from 'rxjs';
 import { FormationsService } from 'src/app/services/formations.service';
-import { DomainesComponent } from 'src/app/pages/formations-page/domaines/domaines.component';
+import { DomainesComponent } from 'src/app/pages/formations-page/sidenav/domaines/domaines.component';
 @Component({
   selector: 'app-sidenav',
   templateUrl: './sidenav.component.html',
@@ -20,6 +20,8 @@ export class SidenavComponent implements OnInit {
     this.subscription = this.formationsService.currentDomaines.subscribe((message: any) => {
       if(message.length){
         this.domaines = message
+        console.log(this.domaines);
+        
       }
     })
   }
