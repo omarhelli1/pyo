@@ -39,7 +39,13 @@ public class Formation {
             inverseJoinColumns = @JoinColumn(name = "theme_id"))	
 	private List<Theme> theme;
 
+	public List<Theme> getTheme() {
+		return theme;
+	}
 
+	public void setTheme(List<Theme> theme) {
+		this.theme = theme;
+	}
 
 	public Formation() {
 		super();
@@ -53,6 +59,15 @@ public class Formation {
 		this.setPersonnalise(personnalise);
 		this.setDescription(description);
 		this.setPrix(prix);
+	}
+
+	public Formation(Long id, String nom, Boolean personnalise, String description, Integer prix, List<Theme> theme) {
+		this.id = id;
+		this.nom = nom;
+		this.personnalise = personnalise;
+		this.description = description;
+		this.prix = prix;
+		this.theme = theme;
 	}
 
 	public Long getId() {

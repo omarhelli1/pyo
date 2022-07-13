@@ -1,97 +1,91 @@
-<form class="needs-validation" novalidate="">
+<form class="form-create-formation" [formGroup]="formationForm">
   <div class="row">
-    <div class="col-md-6 mb-3">
-      <label for="utilisateurs">Formateur : </label>
+    <div class="container-input">
+      <!-- <label for="" class="label"
+        >Formateur : <span class="required-input"></span
+      ></label>
       <input
         type="text"
-        class="form-control"
-        id="utilisateurs"
+        class="input"
+        formControlName="nom"
         placeholder="Nom du formateur"
-        value=""
-        required=""
+      /> -->
+      <!-- <input
+        type="text"
+        class="input"
+        formControlName="prenom"
+        placeholder="Prénom du formateur"
       />
+    </div>
+
+    <div class="container-input">
+      <label for="" class="label"
+        >Domaine : <span class="required-input"></span
+      ></label>
       <input
         type="text"
-        class="form-control"
-        id="service_id"
-        placeholder="Prénom du formateur"
-        value=""
-        required=""
+        class="input"
+        formControlName="nom"
+        placeholder="Nom de domaine"
+      /> -->
+
+      <label for="theme" class="label"
+        >Thème<span class="required-input"></span
+      ></label>
+      <!-- <input
+        type="text"
+        class="input"
+        formControlName="theme"
+        placeholder="Theme de la formation"
+      /> -->
+
+      <select class="custom-select d-block w-100"  formControlName="theme">
+        <option value="{{theme.id}}" *ngFor="let theme of themes">{{theme.nom}}</option>
+      </select>
+
+      <label for="formation">Formation</label>
+      <input
+        type="text"
+        class="input"
+        formControlName="nom"
+        placeholder="Nom de la formation"
       />
-      <div class="invalid-feedback">Valid nom is required.</div>
-    </div>
-    <label for="domaines">Domaine</label>
-    <input
-      type="text"
-      class="form-control"
-      id="nom"
-      placeholder="Nom de domaine"
-      value=""
-      required=""
-    />
-    <div class="invalid-feedback">Valid nom is required.</div>
-  </div>
-  <div class="col-md-6 mb-3">
-    <label for="thème">Thème</label>
-    <input
-      type="text"
-      class="form-control"
-      id="nom"
-      placeholder="Theme de la formation"
-      value=""
-      required=""
-    />
-    <div class="invalid-feedback">Valid theme is required.</div>
-    <label for="formation">Formation</label>
-    <input
-      type="text"
-      class="form-control"
-      id="nom"
-      placeholder="Nom de la formation"
-      value=""
-      required=""
-    />
-    <div class="invalid-feedback">Valid nom is required.</div>
+
+    <label for="description">Détails de la Formation</label>
     <input
       type="textarea"
-      class="form-control"
-      id="description"
+      class="input"
+      formControlName="description"
       placeholder="decrire la formation"
-      value=""
-      required=""
     />
-    <div class="invalid-feedback">Valid description is required.</div>
-    <label for="session">Session</label>
-    <input
-      type="number"
-      style="visibility: hidden"
-      class="form-control"
-      id="formation_id"
-      placeholder="Nom-de-session ou numero"
-      value=""
-      required=""
-    />
-
-    <input
-      type="Date"
-      class="form-control"
-      id="date"
-      placeholder="date-de-formation"
-      value=""
-      required=""
-    />
-    <div class="invalid-feedback">Valid date is required.</div>
-
     <label for="prix ">Prix</label>
-    <input
-      type="float"
-      class="form-control"
-      id="prix"
-      placeholder="prix-de-formation"
-      value=""
-      required=""
-    /><span>€</span>
+    <input type="float" class="input" formControlName="prix" /><span>€</span>
     <div class="invalid-feedback">Valid prix is required.</div>
+  </div>
+    <!--
+    <div class="container-input">
+      <label for="session">Session</label>
+      <input
+        type="number"
+        style="visibility: hidden"
+        class="input"
+        form-controlName="nom"
+        placeholder="Nom-de-session ou numero"
+
+      /> -->
+    <!--
+      <input
+        type="Date"
+        class="form-control"
+        id="date"
+        placeholder="date-de-formation"
+        value=""
+        required=""
+      />
+      <div class="invalid-feedback">Valid date is required.</div>
+
+
+    </div>
 
     <div class="col-md-4 mb-3">
       <label for="type">Type</label>
@@ -103,7 +97,7 @@
       <div class="invalid-feedback">Please provide a valid type.</div>
     </div>
 
-    <div class="container-session">
+    <div class="container-input">
       <label for="session">Adresse</label>
       <label for="session">Rue :</label
       ><input
@@ -178,8 +172,9 @@
         <input type="checkbox" name="test" value="algo" />ALGORYTHME<br />
         <input type="checkbox" name="test" value="reseau" />RESEAU<br />
         <input type="checkbox" name="test" value="projet" />SOFTS SKILLS<br />
-      </div>
-    </div>
+      </div>-->
+    <!-- </div> -->
+
     <h4 class="mb-3">
       En attente de Validation de la formation par le Responsable
     </h4>
@@ -187,9 +182,10 @@
       >Validation de la formation par le Responsable ce "date"</span
     >
 
-    <hr class="mb-4" />
-    <button class="btn btn-primary btn-lg btn-block" type="submit">
-      ENREGISTRER LA FORMATION
-    </button>
+    <div class="container-btn-inscription">
+      <button class="btn" (click)="submitForm()">
+        ENREGISTRER LA FORMATION
+      </button>
+    </div>
   </div>
 </form>
