@@ -18,15 +18,13 @@ public class Session {
 	@Id
 	@GeneratedValue
 	private Long id;
-	@Column(name="data")
+	@Column(name="date")
 	private Date date;
 	@Column(name="lieu")
 	private String lieu;
 	@ManyToOne
 	@JoinColumn(name="formation_id")
 	private Formation formation;
-	@Column(name="prix")
-	private Float prix;
 	@Column(name="lien")
 	private String lien;
 	@Column(name="type")
@@ -38,14 +36,13 @@ public class Session {
 		super();
 		// TODO Auto-generated constructor stub
 	}
-	public Session(Long id, Date date, String lieu, Formation formation, Float prix, String lien, Type type,
+	public Session(Long id, Date date, String lieu, Formation formation, String lien, Type type,
 			Boolean confirmation_formateur) {
 		super();
 		this.setId(id);
 		this.setDate(date);
 		this.setLieu(lieu);
 		this.setFormation(formation);
-		this.setPrix(prix);
 		this.setLien(lien);
 		this.setType(type);
 		this.setConfirmation_formateur(confirmation_formateur);
@@ -83,13 +80,6 @@ public class Session {
 		this.formation = formation;
 	}
 	
-	public Float getPrix() {
-		return prix;
-	}
-	
-	public void setPrix(Float prix) {
-		this.prix = prix;
-	}
 	
 	public String getLien() {
 		return lien;

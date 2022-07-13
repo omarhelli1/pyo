@@ -22,23 +22,37 @@ public class Formation {
 	private Boolean personnalise;
 	@Column(name="description")
 	private String description;
+	@Column(name="prix")
+	private Integer prix;
+	public Integer getPrix() {
+		return prix;
+	}
+
+	public void setPrix(Integer prix) {
+		this.prix = prix;
+	}
+
 	@ManyToMany
 	@JoinTable(
             name = "formation_theme",
             joinColumns = @JoinColumn(name="formation_id"),
             inverseJoinColumns = @JoinColumn(name = "theme_id"))	
 	private List<Theme> theme;
+
+
+
 	public Formation() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
 	
-	public Formation(Long id, String nom, Boolean personnalise, String description) {
+	public Formation(Long id, String nom, Boolean personnalise, String description, Integer prix) {
 		super();
 		this.setId(id);
 		this.setNom(nom);
 		this.setPersonnalise(personnalise);
 		this.setDescription(description);
+		this.setPrix(prix);
 	}
 
 	public Long getId() {

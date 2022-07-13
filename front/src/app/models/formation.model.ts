@@ -2,7 +2,8 @@
 //  bdd
 // pour formation
 export default interface FormationModel{
-
+  id: Number;
   nom:string;
-  personnalise:boolean;
+  description:boolean;
+  prix: Number;
 };
