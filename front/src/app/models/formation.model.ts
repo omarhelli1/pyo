@@ -1,9 +1,13 @@
 
 //  bdd
+
+import Theme from "./theme.model";
+
 // pour formation
 export default interface FormationModel{
-  id: Number;
+  id: number;
   nom:string;
-  description:boolean;
-  prix: Number;
+  description:string;
+  prix: number;
+  theme: Theme;
 };

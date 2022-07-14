@@ -2,6 +2,7 @@ package filrougePYO.back.controller;
 
 import java.util.List;
 
+import filrougePYO.back.services.ThemeService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -17,12 +18,13 @@ import filrougePYO.back.entity.Theme;
 public class ThemeController {
 
 	@Autowired
-	private ThemeDao themeDao;
-	
+	private ThemeService themeService;
+
+
 	@GetMapping("")
 //	@ResponseStatus(code=HttpStatus.OK)
 	public List<Theme> findAll(){
-		return this.themeDao.findAll();
+		return this.themeService.getThemes();
 	}
 	
 }
