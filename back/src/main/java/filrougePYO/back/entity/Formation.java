@@ -8,6 +8,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.JoinTable;
+import javax.persistence.Lob;
 import javax.persistence.ManyToMany;
 import javax.persistence.Table;
 @Entity
@@ -20,7 +21,7 @@ public class Formation {
 	private String nom;
 	@Column(name="personnalise")
 	private Boolean personnalise;
-	@Column(name="description")
+	@Column(name="description", columnDefinition = "TEXT")
 	private String description;
 	@Column(name="prix")
 	private Integer prix;
