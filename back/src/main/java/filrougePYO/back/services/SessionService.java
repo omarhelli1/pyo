@@ -19,5 +19,9 @@ public class SessionService {
         return this.sessionDao.findAll();
     }
 
+public Session addSession(Session session){
+    System.out.println(session);
 
+    return session;
+}
 }

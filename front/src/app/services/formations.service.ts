@@ -29,13 +29,14 @@ export class FormationsService  {
   data = []
   data2 = []
   themes: any = {}
+  urlApi="http://localhost:8080"
+
   constructor(private http: HttpClient, private route: ActivatedRoute, private router: Router) {
     this.http.get('http://localhost:8080/domaines/themeBySousTheme').subscribe((domaines: any) =>{
       if(domaines.length > 0){
         this.domainesSource.next(domaines)
-        this.data = domaines  
-        
-              
+        this.data = domaines
+
       }
     })
 
@@ -58,8 +59,13 @@ export class FormationsService  {
     this.themeSource.next(theme)
    }
 
-   detailsFormation(formation: any){    
+   detailsFormation(formation: any){
     this.formationSource.next(formation)
+   }
+
+   envoiFormulaire(formation: any){
+    this.http.post(this.urlApi+"/formations/ajoutFormation", formation).subscribe();
+    console.log(formation)
    }
 
 }
