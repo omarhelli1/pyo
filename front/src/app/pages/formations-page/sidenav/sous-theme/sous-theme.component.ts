@@ -16,23 +16,33 @@ export class SousThemeComponent implements OnInit {
 
   constructor(private router: Router, private formationsService: FormationsService) { }
 
-    ngOnInit(): void {
-      console.log(this.theme);
-      
-    }
+    ngOnInit(): void {}
 
-    showThemes() {
-      this.isShowThemes = !this.isShowThemes
+    showThemes(theme: any) {
+
+
+      if(theme.formation){
+        console.log('piou');
+        
+        this.router.navigate(['/catalogue', 'liste-des-formations', this.theme.nom.replace(this.regexUri, '-'), this.theme.id, theme.nom.replace(this.regexUri, '-'), theme.id]);
+        this.formationsService.changeTheme(theme);
+        ////////////////////////////////////////////////////////////////////////////////////////////////////////
+        sessionStorage.setItem('liste-formations', JSON.stringify(theme) );
+      }else {
+        this.isShowThemes = !this.isShowThemes
+      }
+    
     }
 
     showListFormation(theme: any){
-      console.log(theme);
       
-      if(theme.formation.length > 0){
-        this.router.navigate(['/catalogue', 'liste-des-formations', this.theme.nom.replace(this.regexUri, '-'), this.theme.id, theme.nom.replace(this.regexUri, '-'), theme.id]);
-        this.formationsService.changeTheme(theme);
-        sessionStorage.setItem('liste-formations', JSON.stringify(theme) );
-      }
+        if(theme.formation.length > 0){
+          this.router.navigate(['/catalogue', 'liste-des-formations', this.theme.nom.replace(this.regexUri, '-'), this.theme.id, theme.nom.replace(this.regexUri, '-'), theme.id]);
+          this.formationsService.changeTheme(theme);
+          sessionStorage.setItem('liste-formations', JSON.stringify(theme) );
+        }
+      
+    
     }
   }
 

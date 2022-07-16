@@ -19,15 +19,7 @@ export class DomainesComponent implements OnInit {
   
   constructor(private router: Router, private formationsService: FormationsService, private _renderer: Renderer2) { }
 
-  ngOnInit(): void {
-    console.log(this.data);
-    // if(this.data.parent_id != null){
-      
-    //   this.data.themes.sort((a: Theme,b: Theme) => a.themes.length - b.themes.length);
-
-    // }
-
-  }
+  ngOnInit(): void {}
 
   showListFormation(theme: any){
     
@@ -43,14 +35,9 @@ export class DomainesComponent implements OnInit {
 
   showThemes() {
     this.isShowThemes = !this.isShowThemes
-    console.log(this.isShowThemes);
-    
   }
 
-  showSubThemes($event: Event){
-    console.log($event);
-    
-  }
+  showSubThemes($event: Event){ }
 
 
 
