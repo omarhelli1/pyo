@@ -47,6 +47,14 @@ public class Theme {
 		// TODO Auto-generated constructor stub
 	}
 
+	public Theme(Long id, String nom, Long parent_id, List<Formation> formation) {
+		super();
+		this.id = id;
+		this.nom = nom;
+		this.parent_id = parent_id;
+		this.formation = formation;
+	}
+
 	public Theme(Long id, String nom, Long parent_id, Domaine domaine, Formation formation) {
 		
 		this.setId(id);

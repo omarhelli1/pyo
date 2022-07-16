@@ -25,7 +25,6 @@ public class DomaineService {
 		List<Theme> themes_child = new ArrayList<Theme>();
 		List<Domaine> domaines = this.domaineDao.findAll();
 		List<DomaineDto> returnedDomaines = new ArrayList<>();
-		int indexDomaine = 0;
 		buildDomainesDto(themes_child, domaines, returnedDomaines);
 		return returnedDomaines;
 	}
@@ -49,25 +48,19 @@ public class DomaineService {
 			List<ThemeAvecSousThemes> themes = new ArrayList<>();
 			for (Theme theme :  domaine.getThemes()) {
 				ThemeAvecSousThemes parent = new ThemeAvecSousThemes(theme);
+		
 				if(themes_child.size() > 0) {
 					for (Theme child : themes_child) {
-						//System.out.println(child.getNom());
-						if(child.getParent_id() == theme.getId()) { 
-							
+						if(child.getParent_id().equals(theme.getId())) { 
 							parent.setTheme(child);
-							
-//							System.out.println("poiuytrtyuiop^poiuyrrtyuiop");
-//							System.out.println(theme.getThemes().get(0).getNom());
 						}
 					}
+					
 					themes.add(parent);
 					domaineDto.setThemes(themes);
 				}
-				
 			}
 			returnedDomaines.add(domaineDto);
-			//System.out.println(themes.get(0).getNom());
-			//System.out.println(themes.get(0).getThemes().get(0).getNom());
 		}
 	}
 
@@ -92,7 +85,7 @@ public class DomaineService {
 				if(themes_child.size() > 0) {
 					for (Theme child : themes_child) {
 						//System.out.println(child.getNom());
-						if(child.getParent_id() == theme.getId()) {
+						if(child.getParent_id().equals(theme.getId())) {
 							parent.setTheme(child);
 						}
 					}
