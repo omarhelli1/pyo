@@ -1,6 +1,17 @@
 
-<div class="container-inscription-client">
+<div class="container-inscription-client" >
     <form class="form-inscription-client" [formGroup]="userForm">
+        <!-- <div class="container-input">
+            <label for="" class="label"> Nom : <span class="required-input">*</span></label>
+            <select class="input" name="" id="">
+                <option value="" *ngFor="let session of formation.session">Date: {{session.date | date:'full':'+0200'}} | Lieu: {{session.lieu}}</option>
+            </select>        
+        </div> -->
+        <div class="container-input">
+            <select class="input" name="" id="">
+                <option value="" *ngFor="let session of sessions">Date: {{session.date | date:'full':'+0200'}} | Lieu: {{session.lieu}}</option>
+            </select> 
+        </div>    
         <div class="container-input">
             <label for="" class="label"> Nom : <span class="required-input">*</span></label>
             <input type="text" class="input" formControlName="nom">

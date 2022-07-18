@@ -1,37 +1,64 @@
 <form [formGroup]="sessionForm">
     <div class="input-group">
-        <label class="label" for="">Formation :</label>
-        <select class="input" type="text" formControlName="formation">
-            <option [ngValue]="null" disabled>Selectionner une formation</option>
-            <option [ngValue]="formation" *ngFor="let formation of formations">{{formation.nom}}</option>
-        </select>
+        <div class="input-div">
+            <label class="label" for="">Formation :<span>*</span></label>
+            <select class="input" type="text" formControlName="formation">
+                <option [ngValue]="null" disabled>Selectionner une formation</option>
+                <option [ngValue]="formation" *ngFor="let formation of formations">{{formation.nom}}</option>
+            </select>
+        </div>
+        <div class="error" *ngIf="sessionForm.controls['formation'].invalid && (sessionForm.controls['formation'].dirty || sessionForm.controls['formation'].touched)">
+            <span>Veuillez renseigner une formation</span>
+        </div>
     </div>
     <div class="input-group">
-        <label class="label" for="">Lieu :</label>
-        <input class="input" type="text" formControlName="lieu">
+        <div class="input-div">
+            <label class="label" for="">Lieu :<span>*</span></label>
+            <input class="input" type="text" formControlName="lieu">
+        </div>
+        <div class="error" *ngIf="sessionForm.controls['lieu'].invalid && (sessionForm.controls['lieu'].dirty || sessionForm.controls['lieu'].touched)">
+            <span >Veuillez renseigner un lieu</span>
+        </div>
     </div>
     <div class="input-group">
-        <label class="label" for="">Date :</label>
-        <input class="input" type="date" formControlName="date">
+        <div class="input-div">
+            <label class="label" for="">Date :<span>*</span></label>
+            <input class="input" type="date" formControlName="date">
+        </div>
+        <div class="error" *ngIf="sessionForm.controls['date'].invalid && (sessionForm.controls['date'].dirty || sessionForm.controls['date'].touched)">
+            <span >Veuillez renseigner une date</span>
+        </div>
     </div>
     <div class="input-group">
-        <label class="label" for="">Lien :</label>
-        <input class="input" type="text" formControlName="lien">
+        <div class="input-div">
+            <label class="label" for="">Lien :<span>*</span></label>
+            <input class="input" type="text" formControlName="lien">
+        </div>
+        <div class="error" *ngIf="sessionForm.controls['lien'].invalid && (sessionForm.controls['lien'].dirty || sessionForm.controls['lien'].touched)">
+            <span >Veuillez renseigner un lien pour le test</span>
+        </div>
     </div>
     <div class="input-group">
-        <label class="label" for="">Confirmation formateur :</label>
-        <select class="input" type="text" formControlName="confirmation_formateur">
-            <option [ngValue]="null" disabled>Selectionner un formateur</option>
-            <option [ngValue]="formateur.id" *ngFor="let formateur of formateurs">{{formateur.prenom}} {{formateur.nom}}</option>
-        </select>
+        <div class="input-div">
+            <label class="label" for="">Confirmation formateur :</label>
+            <select class="input" type="text" formControlName="confirmation_formateur">
+                <option [ngValue]="null" disabled>Selectionner un formateur</option>
+                <option [ngValue]="formateur.id" *ngFor="let formateur of formateurs">{{formateur.prenom}} {{formateur.nom}}</option>
+            </select>
+        </div>
     </div>
     <div class="input-group">
-        <label class="label" for="">Type :</label>
-        <select class="input" type="text" formControlName="type">
-            <option value="INTER">INTER</option>
-            <option value="INTRA">INTRA</option>
-
-        </select>
+        <div class="input-div">
+            <label class="label" for="">Type : <span>*</span></label>
+            <select class="input" type="text" formControlName="type">
+                <option value="INTER">INTER</option>
+                <option value="INTRA">INTRA</option>
+    
+            </select>
+        </div>
+        <div class="error" *ngIf="sessionForm.controls['type'].invalid && (sessionForm.controls['type'].dirty || sessionForm.controls['type'].touched)">
+            <span >Veuillez renseigner le type de session</span>
+        </div>
     </div>
     <button (click)="submit()">Ajouter</button>
 </form>

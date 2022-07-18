@@ -4,6 +4,7 @@ import { BehaviorSubject } from 'rxjs';
 import { ActivatedRoute, Router } from '@angular/router';
 import Domaine from '../models/domaine.model';
 import Theme from '../models/theme.model';
+import FormationModel from '../models/formation.model';
 
 interface domaines{
   id: string;
@@ -81,4 +82,7 @@ export class FormationsService  {
     return this.http.get(this.urlApi + '/formations/findAll');
    }
 
+   findById(formation_id: any){
+    return this.http.get<FormationModel>(this.urlApi + '/formations/findById/' + parseInt(formation_id));
+   }
 } 
