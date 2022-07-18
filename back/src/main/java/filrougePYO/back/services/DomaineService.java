@@ -59,7 +59,11 @@ public class DomaineService {
 					
 					themes.add(parent);
 					domaineDto.setThemes(themes);
+				}else {
+					themes.add(parent);
+					domaineDto.setThemes(themes);
 				}
+				
 			}
 			returnedDomaines.add(domaineDto);
 		}
