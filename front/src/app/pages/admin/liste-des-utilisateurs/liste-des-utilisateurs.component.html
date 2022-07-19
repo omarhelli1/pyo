@@ -17,10 +17,10 @@
         <tr *ngFor="let utilisateur of utilisateurs; let i = index">
             <td>{{utilisateur.nom | slice:0:50}} ...</td>
             <td>{{utilisateur.prenom | slice:0:50}} ...</td>
-            <td>{{utilisateur.birthDay | date: 'ddMMyyyy' }} ...</td>
+            <td>{{utilisateur.birthDay | date:'short':'+0200'}} ...</td>
             <td>{{utilisateur.mail}}</td>
-            <td>jgvj;</td>
-            <td>khgk</td>
+            <td>Nom de l'entreprise</td>
+            <td>Nom de service</td>
             <!-- <td>{{utilisateur.mail | slice:0:50}} ...</td>
             <td>{{utilisateur.enterprise | slice:0:50}} ...</td>
             <td>{{utilisateur.serviceId | slice:0:50}} ...</td> -->

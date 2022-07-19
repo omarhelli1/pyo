@@ -28,8 +28,6 @@ export class FormulaireCreateThemeComponent implements OnInit {
     this.domaineService.getAll().subscribe((domaines: any) => {
       this.domaines = domaines
       this.domainesCopy = domaines
-      console.log(this.domaines);
-      
     })
 
     this.subscription= this.themesService.currentThemes.subscribe((themes : any) =>{
@@ -38,43 +36,29 @@ export class FormulaireCreateThemeComponent implements OnInit {
       }
     })
   }
+  isPArentid: boolean = false
 
   onChangeParent($event: number){
-    console.log($event);
+
     // let domaine = this.domaines.find(domaine => domaine.themes.find(theme => theme.id == $event))
     if($event){
-      console.log(this.domaines);
+      this.isPArentid = true
       let currentDomaine;
       currentDomaine = this.domaines.find(domaine => {
-
-console.log(domaine);
-        console.log(domaine.themes);
-        
         return domaine.themes.find(theme => {
           return theme.id == $event
         })
       });
       this.domainesCopy = [currentDomaine];
-      console.log(this.themeForm.value.domaine);
-      // this.themeForm.controls['domaine'].markAsDirty();
-      // this.themeForm.controls['domaine'].touched;
-      console.log(this.themeForm.value.domaine);
       this.themeForm.controls['domaine'].patchValue(this.domainesCopy[0])
-      console.log(this.themeForm.value.domaine);
-
-      console.log(this.domainesCopy[0]);
       this.themeForm.value.domaine = null
-
     }
-  
-    
   }
 
   public submit(){
-    this.themeForm.value.domaine = this.domainesCopy[0]
-    console.log(this.themeForm.value.domaine);
-
-    //delete this.themeForm.value.domaine.themes
+    if(this.isPArentid){
+      this.themeForm.value.domaine = this.domainesCopy[0]
+    }
     this.themesService.ajouterUnTheme(this.themeForm.value);
     this.themeForm.reset();
   }

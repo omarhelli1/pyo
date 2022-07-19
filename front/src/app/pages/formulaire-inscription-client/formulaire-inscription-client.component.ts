@@ -35,10 +35,7 @@ export class FormulaireInscriptionClientComponent implements OnInit {
 
     this.activatedRoute.paramMap.subscribe((params : ParamMap)=> {  
       this.formationsService.findById(params.get('formation_id')).subscribe((formation: FormationModel) =>{
-        console.log(params.get('formation_id'));
-        
         this.formation = formation
-        console.log(this.formation);
       })
     }); 
 
